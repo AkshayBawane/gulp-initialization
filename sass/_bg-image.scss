@@ -1,0 +1,156 @@
+/*--------------------------------------------------
+# IMAGES
+--------------------------------------------------*/
+
+// 2560x1440 ~ 1920x1080 ~ 1600x900 ~ 1366x768 ~ 1280x720 ~ 16:9
+.bg-img-1-1920 { background-image: url('../images/1920-554048-snowboarding.jpg'); }
+.bg-img-2-1920 { background-image: url('../images/1920-1834335-adventure.jpg'); }
+.bg-img-3-1920 { background-image: url('../images/1920-1882881-snowboarding.jpg'); }
+
+// Background Devices Office Image
+.bg-img-11-1920 { background-image: url('../images/1920-2558666-laptop.jpg'); }
+
+// END 2560x1440 ~ 1920x1080 ~ 1600x900 ~ 1366x768 ~ 1280x720 ~ 16:9
+
+.bg-random-1920x1080 { background-image: url('https://unsplash.it/1920/1080/?random') !important; }
+
+// 1. Random Images For 2560x1440 ~ 1920x1080 ~ 1600x900 ~ 1366x768 ~ 1280x720 ~ 16:9
+@media (max-width: 1280px) and (min-width: 1025px) {
+	.bg-random-16x9 { background-image: url('https://unsplash.it/1280/720/?random') !important; }
+}
+@media (max-width: 1366px) and (min-width: 1281px) {
+	.bg-random-16x9 { background-image: url('https://unsplash.it/1366/768/?random') !important; }
+}
+@media (max-width: 1600px) and (min-width: 1367px) {
+	.bg-random-16x9 { background-image: url('https://unsplash.it/1600/900/?random') !important; }
+}
+@media (max-width: 1920px) and (min-width: 1601px) {
+	.bg-random-16x9 { background-image: url('https://unsplash.it/1920/1080/?random') !important; }
+}
+@media (max-width: 2560px) and (min-width: 1921px)  {
+	.bg-random-16x9 { background-image: url('https://unsplash.it/2560/1440/?random') !important; }
+}
+
+// 2. Random Images For 1680x1050 ~ 1440x900 ~ 1280x800 ~ 16:10
+
+// More Heighted Random Images For 1920x1440 ~ 1024x768 ~ 4:3
+
+// 1200x800 Image & Aspect Ratio 3:2
+// END 1200x800 Image & Aspect Ratio 3:2
+
+// 900x600 Image & Aspect Ratio 3:2
+// END 900x600 Image & Aspect Ratio 3:2
+
+// 600x400 Image & Aspect Ratio 3:2
+// END 600x400 Image & Aspect Ratio 3:2
+
+// 450x300 Image & Aspect Ratio 3:2
+// END 450x300 Image & Aspect Ratio 3:2
+
+/*--------------------------------------------------
+# GRADIENT
+--------------------------------------------------*/
+// Solid Gradient Animation
+.bg-animate-1 {
+	background: linear-gradient(-90deg, #a18cd1, #fad0c4, #8fd3f4, #00f2fe);
+	background-size: 800% 800%;
+	animation: animate-1 30s ease infinite;
+	@keyframes animate-1 { 
+	    0%{ background-position:0% 51%}
+	    50%{ background-position:100% 50%}
+	    100%{ background-position:0% 51%}
+	}
+}
+
+// Semi-Transparent Gradient Animation
+.bg-animate-trans-day-night {
+	background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%,rgba(127,255,246,0) 50%,rgba(255,255,255,.20) 100%);
+	background-size: 800% 800%;
+	animation: bg-animate-trans-day-night 30s ease infinite;
+	@keyframes bg-animate-trans-day-night { 
+	    0%{ background-position:0% 51%}
+	    50%{ background-position:100% 50%}
+	    100%{ background-position:0% 51%}
+	}
+}
+.bg-animate-night-fade {
+	background: linear-gradient(270deg, #5779ff, #fc57ff);
+	background-size: 800% 800%;
+
+	animation: animate-night-fade 15s ease infinite;
+
+	@keyframes animate-night-fade { 
+	    0%{background-position:0% 50%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 50%}
+	}
+}
+.bg-animate-trans-1 {
+	background: linear-gradient(135deg, rgba(0,0,0,1) 0%,rgba(41,137,216,0.01) 40%,rgba(41,137,216,0.01) 60%,rgba(0,255,250,1) 100%);
+	background-size: 800% 800%;
+	animation: animate-trans-1 30s ease infinite;
+	@keyframes animate-trans-1 { 
+	    0%{ background-position:0% 51%}
+	    50%{ background-position:100% 50%}
+	    100%{ background-position:0% 51%}
+	}
+}
+
+.bg-hr-animate-1 {
+    background: linear-gradient(to right, rgba(0, 24, 123, 1) 0%, rgba(236, 0, 185, 1) 27%, rgba(182, 0, 236, 1) 52%, rgba(0, 236, 227, 1) 100%);
+    background-size: 800% 800%;
+    animation: bg-hr-animate-1 30s ease infinite;
+    @keyframes bg-hr-animate-1 { 
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+}
+// Linear Single Color Gradient
+
+
+
+// Image Marquee Animation
+.bg-img-animate {
+	background: url('https://unsplash.it/1920/1080/?random');
+	background-size: 800% 800%;
+	animation: bg-img 30s ease infinite;
+	@keyframes bg-img { 
+	    0%{ background-position:0% 51%}
+	    50%{ background-position:100% 50%}
+	    100%{ background-position:0% 51%}
+	}
+}
+// Directions b2t ~ bottom to top; l2r ~ left to right;
+.bg-b2t-black 		{ background: linear-gradient(to top, rgba(0, 0, 0,.8) 0%, rgba(255, 255, 255, .8) 100%) !important; }
+.bg-t2b-black 		{ background: linear-gradient(to top, rgba(255, 255, 255,0) 0%, rgba(0, 0, 0, .8) 100%) !important; }
+.bg-t2b-sky-blue	{ background: linear-gradient(to bottom, rgba(48, 144, 255, 0.8) 0%,rgba(255,255,255,0) 100%) !important; }
+.bg-center-black 	{ background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 50%,rgba(0,0,0,0) 100%) !important; }
+.bg-center-danger 	{ background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(255,0,57,1) 50%,rgba(0,0,0,0) 100%) !important; }
+.bg-center-blue 	{ background: linear-gradient(to right, transparent 0%, #007eff 50%, transparent 100%) !important; }
+
+.bg-l2r-black 		{ background: linear-gradient(to right, rgba(0,0,0,.8) 0%,rgba(0,0,0,0) 100%) !important; }
+.bg-l2r-white 		{ background: linear-gradient(to right, rgba(255,255,255,.8) 0%,rgba(0,0,0,0) 100%) !important; }
+.bg-l2r-orange 		{ background: linear-gradient(to right, rgba(255,165,0,.8) 0%,rgba(0,0,0,0) 100%) !important; }
+.bg-l2r-lawn-green	{ background: linear-gradient(to right, rgba(124,252,0,.8) 0%,rgba(0,0,0,0) 100%) !important; }
+.bg-l2r-spring-green { background: linear-gradient(to right, rgba(0,250,154,.8) 0%,rgba(0,0,0,0) 100%) !important; }
+.bg-l2r-indigo 		{ background: linear-gradient(to right,rgba(75, 0, 130, .8) 0%,rgba(0,0,0,0) 100%) !important; }
+.bg-l2r-cyan 		{ background: linear-gradient(to right,rgba(0, 255, 255, .8) 0%,rgba(0,0,0,0) 100%) !important; }
+.bg-l2r-navy 		{ background: linear-gradient(to right,rgba(0, 0, 128, .8) 0%,rgba(0,0,0,0) 100%) !important; }
+.bg-l2r-blueviolet 	{ background: linear-gradient(to right, rgba(138,43,226,.8) 0%,rgba(0,0,0,0) 100%) !important; }
+.bg-l2r-deeppink 	{ background: linear-gradient(to right,rgba(255, 20, 147, .8) 0%,rgba(0,0,0,0) 100%) !important; }
+
+// Linear Mixed Color Gradient
+.bg-night-fade {
+	background: linear-gradient(to right, rgba(161,140,209,1) 0%,rgba(251,194,235,1) 100%);
+}
+// radial Gradient
+.bg-radial-1 {
+
+}
+
+// Rainbow Gradient
+.bg-rainbow-1 {
+	background: repeating-linear-gradient(-45deg,red 0%, yellow 7.14%, rgb(0,255,0) 14.28%, rgb(0,255,255) 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+	background-size:600vw 600vw;
+}

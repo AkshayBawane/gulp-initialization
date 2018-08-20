@@ -1,0 +1,181 @@
+1. install node
+2. npm install --global gulp-cli or npm install --global gulp
+3. npm install --save-dev gulp
+4. npm install --save-dev babel-core
+6. npm install --no-optional
+6. npm install babel-register --save-dev
+6. npm rm -rf node_modules
+6. npm cache verify
+5. npm install
+
+Change dependencies of boootstrap version to latest,
+
+Help:
+https://gulpjs.org/getting-started
+https://github.com/jakearchibald/wittr/issues/20
+https://github.com/yeoman/generator-webapp/issues/356
+
+Uninstall:
+1. npm uninstall gulp --save-dev
+2. npm uninstall gulp -g
+
+
+Log:
+Microsoft Windows [Version 10.0.17134.137]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\aksha>d:
+
+D:\>cd D:\Project\frenzy
+
+D:\Project\frenzy>gulp serve
+'gulp' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\Project\frenzy>npm install --global gulp-cli
+C:\Users\aksha\AppData\Roaming\npm\gulp -> C:\Users\aksha\AppData\Roaming\npm\node_modules\gulp-cli\bin\gulp.js
++ gulp-cli@2.0.1
+added 235 packages in 50.513s
+
+D:\Project\frenzy>gulp serve
+[11:02:07] Failed to load external module @babel/register
+[11:02:07] Requiring external module babel-register
+[11:02:19] Using gulpfile D:\Project\frenzy\gulpfile.babel.js
+[11:02:19] Starting 'styles'...
+[11:02:21] 'styles' errored after 1.48 s
+[11:02:21] Error: Node Sass does not yet support your current environment: Windows 64-bit with Unsupported runtime (57)
+For more information on which environments are supported please see:
+https://github.com/sass/node-sass/releases/tag/v3.13.1
+    at module.exports (D:\Project\frenzy\node_modules\node-sass\lib\binding.js:13:13)
+    at Object.<anonymous> (D:\Project\frenzy\node_modules\node-sass\lib\index.js:14:35)
+    at Module._compile (module.js:652:30)
+    at Module._extensions..js (module.js:663:10)
+    at Object.require.extensions.(anonymous function) [as .js] (D:\Project\frenzy\node_modules\babel-register\lib\node.js:152:7)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+
+D:\Project\frenzy>npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (frenzy) npm WARN init canceled
+
+D:\Project\frenzy>
+
+D:\Project\frenzy>npm install --save-dev gulp
+npm WARN deprecated graceful-fs@3.0.11: please upgrade to graceful-fs 4 for compatibility with current and future versions of Node.js
+npm WARN deprecated minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated minimatch@0.2.14: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated graceful-fs@1.2.3: please upgrade to graceful-fs 4 for compatibility with current and future versions of Node.js
+npm WARN bootstrap@4.0.0 requires a peer of jquery@1.9.1 - 3 but none is installed. You must install peer dependencies yourself.
+npm WARN bootstrap@4.0.0 requires a peer of popper.js@^1.12.9 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.3 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ gulp@3.9.1
+added 12 packages, removed 41 packages, updated 18 packages and moved 6 packages in 61.207s
+
+D:\Project\frenzy>gulp serve
+[11:07:09] Failed to load external module @babel/register
+[11:07:09] Requiring external module babel-register
+[11:07:11] Using gulpfile D:\Project\frenzy\gulpfile.babel.js
+[11:07:11] Starting 'styles'...
+[11:07:11] 'styles' errored after 299 ms
+[11:07:11] Error: Node Sass does not yet support your current environment: Windows 64-bit with Unsupported runtime (57)
+For more information on which environments are supported please see:
+https://github.com/sass/node-sass/releases/tag/v3.13.1
+    at module.exports (D:\Project\frenzy\node_modules\node-sass\lib\binding.js:13:13)
+    at Object.<anonymous> (D:\Project\frenzy\node_modules\node-sass\lib\index.js:14:35)
+    at Module._compile (module.js:652:30)
+    at Module._extensions..js (module.js:663:10)
+    at Object.require.extensions.(anonymous function) [as .js] (D:\Project\frenzy\node_modules\babel-register\lib\node.js:152:7)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+
+D:\Project\frenzy>gulp serve
+[11:08:55] Failed to load external module @babel/register
+[11:08:55] Requiring external module babel-register
+[11:08:56] Using gulpfile D:\Project\frenzy\gulpfile.babel.js
+[11:08:56] Starting 'styles'...
+[11:08:57] 'styles' errored after 148 ms
+[11:08:57] Error: Node Sass does not yet support your current environment: Windows 64-bit with Unsupported runtime (57)
+For more information on which environments are supported please see:
+https://github.com/sass/node-sass/releases/tag/v3.13.1
+    at module.exports (D:\Project\frenzy\node_modules\node-sass\lib\binding.js:13:13)
+    at Object.<anonymous> (D:\Project\frenzy\node_modules\node-sass\lib\index.js:14:35)
+    at Module._compile (module.js:652:30)
+    at Module._extensions..js (module.js:663:10)
+    at Object.require.extensions.(anonymous function) [as .js] (D:\Project\frenzy\node_modules\babel-register\lib\node.js:152:7)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+
+D:\Project\frenzy>npm install
+
+> node-sass@4.9.2 install D:\Project\frenzy\node_modules\node-sass
+> node scripts/install.js
+
+Downloading binary from https://github.com/sass/node-sass/releases/download/v4.9.2/win32-x64-57_binding.node
+Download complete  ] - :
+Binary saved to D:\Project\frenzy\node_modules\node-sass\vendor\win32-x64-57\binding.node
+Caching binary to C:\Users\aksha\AppData\Roaming\npm-cache\node-sass\4.9.2\win32-x64-57_binding.node
+
+> node-sass@4.9.2 postinstall D:\Project\frenzy\node_modules\node-sass
+> node scripts/build.js
+
+Binary found at D:\Project\frenzy\node_modules\node-sass\vendor\win32-x64-57\binding.node
+Testing binary
+Binary is fine
+npm WARN bootstrap@4.0.0 requires a peer of jquery@1.9.1 - 3 but none is installed. You must install peer dependencies yourself.
+npm WARN bootstrap@4.0.0 requires a peer of popper.js@^1.12.9 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.3 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+added 18 packages and updated 9 packages in 87.594s
+
+D:\Project\frenzy>gulp serve
+[11:10:48] Failed to load external module @babel/register
+[11:10:48] Requiring external module babel-register
+[11:10:49] Using gulpfile D:\Project\frenzy\gulpfile.babel.js
+[11:10:49] Starting 'styles'...
+[11:10:57] Starting 'scripts'...
+[11:11:06] Finished 'scripts' after 9.03 s
+[11:11:06] Finished 'styles' after 17 s
+[11:11:06] Starting 'serve'...
+[11:11:08] Finished 'serve' after 2.26 s
+[Browsersync] Access URLs:
+ --------------------------------------
+       Local: http://localhost:9000
+    External: http://192.168.1.103:9000
+ --------------------------------------
+          UI: http://localhost:3001
+ UI External: http://192.168.1.103:3001
+ --------------------------------------
+[Browsersync] Serving files from: ./
+^CTerminate batch job (Y/N)?
+^C
+D:\Project\frenzy>
+
+D:\Project\frenzy>npm install --save-dev babel-core
+npm WARN bootstrap@4.0.0 requires a peer of jquery@1.9.1 - 3 but none is installed. You must install peer dependencies yourself.
+npm WARN bootstrap@4.0.0 requires a peer of popper.js@^1.12.9 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.3 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ babel-core@6.26.3
+updated 1 package in 22.636s

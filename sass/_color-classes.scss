@@ -1,0 +1,351 @@
+.danger-text { color: $danger-color !important; }
+.primary-text { color: $primary-color !important; }
+.warning-text { color: $warning-color !important; }
+.success-text { color: $success-color !important; }
+
+.gray-text { color: $gray-light !important; }
+.white-text { color: $white-color !important; }
+.light-black-text { color: $light-black-color !important; }
+.light-white-text { color: $light-white-color !important; }
+
+.navy-text { color: $navy-color !important; }
+.magenta-text { color: $magenta-color !important; }
+.violetred-text { color: $violetred-color !important; }
+
+/*--------------------------------------------------
+# MIXIN TO CORRECT NAVBAR WITH OUR COLOR PALETTE
+--------------------------------------------------*/
+@mixin color-palette($bgcolor, $txtcolor: $white-color) {
+    background-color: $bgcolor;
+    border-color: $bgcolor;
+    color: $txtcolor !important;
+    h1, h2, h3, h4, h5, h6 {
+        color: $txtcolor;
+    }
+}
+
+/*--------------------------------------------------
+# BACKGROUND COLOR PALLETES
+--------------------------------------------------*/
+.bg {
+    &-primary {
+        @include color-palette($primary-color);
+        &-300 { @include color-palette(lighten($primary-color, 7.5%)); }
+        &-100 { @include color-palette(lighten($primary-color, 15%)); }
+        &-500 { @include color-palette(darken($primary-color, 5%)); }
+        &-600 { @include color-palette(darken($primary-color, 10%)); }
+        &-700 { @include color-palette(darken($primary-color, 15%)); }
+    }
+}
+.bg {
+    &-danger {
+        @include color-palette($danger-color);
+        &-300 { @include color-palette(lighten($danger-color, 7.5%)); }
+        &-100 { @include color-palette(lighten($danger-color, 15%)); }
+        &-500 { @include color-palette(darken($danger-color, 5%)); }
+        &-600 { @include color-palette(darken($danger-color, 10%)); }
+        &-700 { @include color-palette(darken($danger-color, 15%)); }
+    }
+}
+.bg {
+    &-success {
+        @include color-palette($success-color);
+        &-300 { @include color-palette(lighten($success-color, 7.5%)); }
+        &-100 { @include color-palette(lighten($success-color, 15%)); }
+        &-500 { @include color-palette(darken($success-color, 5%)); }
+        &-600 { @include color-palette(darken($success-color, 10%)); }
+        &-700 { @include color-palette(darken($success-color, 15%)); }
+    }
+}
+
+.bg {
+    &-warning {
+        @include color-palette($warning-color);
+        &-300 { @include color-palette(lighten($warning-color, 7.5%)); }
+        &-100 { @include color-palette(lighten($warning-color, 15%)); }
+        &-500 { @include color-palette(darken($warning-color, 5%)); }
+        &-600 { @include color-palette(darken($warning-color, 10%)); }
+        &-700 { @include color-palette(darken($warning-color, 15%)); }
+    }
+}
+.bg {
+    &-info {
+        @include color-palette($info-color);
+        &-300 { @include color-palette(lighten($info-color, 7.5%)); }
+        &-100 { @include color-palette(lighten($info-color, 15%)); }
+        &-500 { @include color-palette(darken($info-color, 5%)); }
+        &-600 { @include color-palette(darken($info-color, 10%)); }
+        &-700 { @include color-palette(darken($info-color, 15%)); }
+    }
+}
+.bg {
+    &-black {
+        @include color-palette($black-color);
+        &-300 { @include color-palette(lighten($black-color, 7.5%)); }
+        &-100 { @include color-palette(lighten($black-color, 15%)); }
+        &-500 { @include color-palette(darken($black-color, 5%)); }
+        &-600 { @include color-palette(darken($black-color, 10%)); }
+        &-700 { @include color-palette(darken($black-color, 15%)); }
+    }
+}
+.bg {
+    &-light-black {
+        @include color-palette($light-black-color);
+        &-300 { @include color-palette(lighten($light-black-color, 7.5%)); }
+        &-100 { @include color-palette(lighten($light-black-color, 15%)); }
+        &-500 { @include color-palette(darken($light-black-color, 5%)); }
+        &-600 { @include color-palette(darken($light-black-color, 10%)); }
+        &-700 { @include color-palette(darken($light-black-color, 15%)); }
+    }
+}
+.bg {
+    &-gray {
+        @include color-palette($gray-color, $light-black-color);
+        &-300 { @include color-palette(lighten($gray-color, 7.5%), $light-black-color); }
+        &-100 { @include color-palette(lighten($gray-color, 15%), $light-black-color); }
+        &-500 { @include color-palette(darken($gray-color, 5%), $light-black-color); }
+        &-600 { @include color-palette(darken($gray-color, 10%), $light-black-color); }
+        &-700 { @include color-palette(darken($gray-color, 15%), $light-black-color); }
+    }
+}
+.bg {
+    &-white {
+        @include color-palette($white-color, $light-black-color);
+        &-300 { @include color-palette(lighten($white-color, 7.5%), $light-black-color); }
+        &-100 { @include color-palette(lighten($white-color, 15%), $light-black-color); }
+        &-500 { @include color-palette(darken($white-color, 5%), $light-black-color); }
+        &-600 { @include color-palette(darken($white-color, 10%), $light-black-color); }
+        &-700 { @include color-palette(darken($white-color, 15%), $light-black-color); }
+    }
+}
+
+.bg {
+    &-magenta {
+        @include color-palette($magenta-color);
+        &-300 { @include color-palette(lighten($magenta-color, 7.5%)); }
+        &-100 { @include color-palette(lighten($magenta-color, 15%)); }
+        &-500 { @include color-palette(darken($magenta-color, 5%)); }
+        &-600 { @include color-palette(darken($magenta-color, 10%)); }
+        &-700 { @include color-palette(darken($magenta-color, 15%)); }
+    }
+}
+.bg {
+    &-navy {
+        @include color-palette($navy-color);
+        &-300 { @include color-palette(lighten($navy-color, 7.5%)); }
+        &-100 { @include color-palette(lighten($navy-color, 15%)); }
+        &-500 { @include color-palette(darken($navy-color, 5%)); }
+        &-600 { @include color-palette(darken($navy-color, 10%)); }
+        &-700 { @include color-palette(darken($navy-color, 15%)); }
+    }
+}
+.bg {
+    &-violetred {
+        @include color-palette($violetred-color);
+        &-300 { @include color-palette(lighten($violetred-color, 7.5%)); }
+        &-100 { @include color-palette(lighten($violetred-color, 15%)); }
+        &-500 { @include color-palette(darken($violetred-color, 5%)); }
+        &-600 { @include color-palette(darken($violetred-color, 10%)); }
+        &-700 { @include color-palette(darken($violetred-color, 15%)); }
+    }
+}
+
+/*--------------------------------------------------
+# COLOR CLASSES
+--------------------------------------------------*/
+.color { &-primary { color: $primary-color !important; }
+    &-danger { color: $danger-color !important; }
+    &-success { color: $success-color !important; }
+    &-warning { color: $warning-color !important; }
+    &-info { color: $info-color !important; }
+    &-black { color: $black-color !important; }
+    &-light-black { color: $light-black-color !important; }
+    &-gray { color: $gray-color !important; }
+    &-white { color: $white-color !important; }
+
+    &-magenta { color: $magenta-color !important; }
+    &-navy { color: $navy-color !important; }
+    &-violetred { color: $violetred-color !important; }
+}
+
+.bg-f2f2f2 { background-color: #f2f2f2 !important; }
+
+.text-pink { color: #ffc0cb; }
+.text-hotpink { color: #ff69b4; }
+.text-deeppink { color: #ff1493; }
+
+.text-turquoise { color: #40e0d0; }
+.text-aquamarine { color: #7fffd4; }
+.text-mediumturquoise { color: #48d1cc; }
+.text-darkturquoise { color: #00ced1; }
+
+.text-cyan { color:#00ffff; }
+.text-darkcyan { color: #008b8b; }
+
+.text-lightseagreen { color: #20b2aa; }
+
+.text-violet { color: #ee82ee; }
+.text-blueviolet { color: #8a2be2; }
+.text-darkviolet { color: #9400d3; }
+.text-mediumvioletred { color: #c71585; }
+
+.text-blue { color: #0000ff; }
+.text-skyblue { color: #87ceeb; }
+.text-lightskyblue { color: #87cefa; }
+.text-aliceblue { color: #f0f8ff; }
+.text-cadetblue { color: #5f9ea0; }
+.text-darkblue { color: #00008b; }
+.text-deepskyblue { color: #00bfff; }
+.text-dodgerblue { color: #1e90ff; }
+.text-royalblue { color: #4169e1; }
+.text-cornflowerblue { color: #6495ed; }
+
+/*--------------------------------------------------
+# BORDER COLORS
+--------------------------------------------------*/
+.border {
+    &-primary {
+        border-color: $primary-color;
+        &-300 {
+            border-color: lighten($primary-color, 7.5%) !important;
+        }
+        &-100 {
+            border-color: lighten($primary-color, 15%) !important;
+        }
+        &-500 {
+            border-color: darken($primary-color, 5%) !important;
+        }
+        &-600 {
+            border-color: darken($primary-color, 10%) !important;
+        }
+        &-700 {
+            border-color: darken($primary-color, 15%) !important;
+        }
+    }
+}
+
+.border {
+    &-danger {
+        border-color: $danger-color;
+        &-300 {
+            border-color: lighten($danger-color, 7.5%) !important;
+        }
+        &-100 {
+            border-color: lighten($danger-color, 15%) !important;
+        }
+        &-500 {
+            border-color: darken($danger-color, 5%) !important;
+        }
+        &-600 {
+            border-color: darken($danger-color, 10%) !important;
+        }
+        &-700 {
+            border-color: darken($danger-color, 15%) !important;
+        }
+    }
+}
+
+.border {
+    &-success {
+        border-color: $success-color;
+        &-300 {
+            border-color: lighten($success-color, 7.5%) !important;
+        }
+        &-100 {
+            border-color: lighten($success-color, 15%) !important;
+        }
+        &-500 {
+            border-color: darken($success-color, 5%) !important;
+        }
+        &-600 {
+            border-color: darken($success-color, 10%) !important;
+        }
+        &-700 {
+            border-color: darken($success-color, 15%) !important;
+        }
+    }
+}
+
+.border {
+    &-warning {
+        border-color: $warning-color;
+        &-300 {
+            border-color: lighten($warning-color, 7.5%) !important;
+        }
+        &-100 {
+            border-color: lighten($warning-color, 15%) !important;
+        }
+        &-500 {
+            border-color: darken($warning-color, 5%) !important;
+        }
+        &-600 {
+            border-color: darken($warning-color, 10%) !important;
+        }
+        &-700 {
+            border-color: darken($warning-color, 15%) !important;
+        }
+    }
+}
+
+.border {
+    &-info {
+        border-color: $info-color;
+        &-300 {
+            border-color: lighten($info-color, 7.5%) !important;
+        }
+        &-100 {
+            border-color: lighten($info-color, 15%) !important;
+        }
+        &-500 {
+            border-color: darken($info-color, 5%) !important;
+        }
+        &-600 {
+            border-color: darken($info-color, 10%) !important;
+        }
+        &-700 {
+            border-color: darken($info-color, 15%) !important;
+        }
+    }
+}
+
+.border {
+    &-black {
+        border-color: $black-color;
+        &-300 {
+            border-color: lighten($black-color, 7.5%) !important;
+        }
+        &-100 {
+            border-color: lighten($black-color, 15%) !important;
+        }
+        &-500 {
+            border-color: darken($black-color, 5%) !important;
+        }
+        &-600 {
+            border-color: darken($black-color, 10%) !important;
+        }
+        &-700 {
+            border-color: darken($black-color, 15%) !important;
+        }
+    }
+}
+
+.border {
+    &-gray {
+        border-color: $gray-color;
+        &-300 {
+            border-color: lighten($gray-color, 7.5%) !important;
+        }
+        &-100 {
+            border-color: lighten($gray-color, 15%) !important;
+        }
+        &-500 {
+            border-color: darken($gray-color, 5%) !important;
+        }
+        &-600 {
+            border-color: darken($gray-color, 10%) !important;
+        }
+        &-700 {
+            border-color: darken($gray-color, 15%) !important;
+        }
+    }
+}
