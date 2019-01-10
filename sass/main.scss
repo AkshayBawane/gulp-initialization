@@ -156,6 +156,48 @@ body, .side, .o-y-scroll {
 
 
 
+/** sass/scss/less code */
+$color-base: blue;
+button {
+    display: flex;
+    border: none;
+    padding: 7px 12px;
+    margin-left: 16px;
+    font-family: inherit;
+    color: darken($color-base, 40%);
+    background: lighten($color-base, 15%);
+
+    &:hover {
+        background: lighten($color-base, 25%);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.container {
+  width: 600px / 960px * 100%;
+}
+
+$highlight: green;
+
+p {
+  color: lighten( $highlight, 20% );
+}
+p {
+  color: darken( $highlight, 10% );
+}
+p {
+  color: fade-out( $highlight, 0.5 );
+}
+p {
+  color: adjust-hue( $highlight, 90 ); // Usually between -360 degrees and 360 degrees.
+}
+p {
+  color: red + blue; // Compiles to magenta.
+}
+
+
 @media (max-width: 575.99px) {}
 @media (min-width: 575.99px) {}
 @media (min-width: 768px) {}

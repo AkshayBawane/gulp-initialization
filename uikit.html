@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 1. UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.22/css/uikit.css"/>
+    <!-- 2. Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap-grid.css"/>
+    <!-- 3. Initialization -->
+    <link rel="stylesheet" type="text/css" href="theme.css"/>
+    <!-- 4. utility-classes -->
+    <link rel="stylesheet" type="text/css" href="utility-classes.css"/>
+</head>
+
+<body>
+    <div class="container">
+        <h1>UI Kit</h1>
+        <h5>Framework</h5>
+    </div>
+    <div style="display: flex; min-height: 100vh; justify-content: center; background-color: lightpink">
+        <div style="align-self: center;">
+            <h1>utility classes</h1>
+        </div>
+    </div>
+    
+    <style type="text/css">
+    .main-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-grow: 1;
+        min-height: 100vh;
+        background-color: deeppink;
+    }
+    </style>
+
+    <style type="text/css">
+        /*UIKit classes*/
+        @media (min-width: 1200px) {
+            /* Horizontal */
+            .uk-grid {
+                margin-left: -30px;
+            }
+            .uk-grid > * {
+                padding-left: 30px;
+            }
+            /* Vertical */
+            .uk-grid + .uk-grid,
+            .uk-grid > .uk-grid-margin,
+            * + .uk-grid-margin {
+               margin-top: 30px;
+            }
+        }
+    </style>
+    <main class="main-content">
+        <h1>utility classes</h1>
+    </main>
+    
+    <div class="py-3 px-3">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="uk-grid-item-match">
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <h3>Heading</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet.
+                        </p>
+                    </div>
+                 </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <h3>Heading</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <div class="header" style="background-color: red">
+        <h1>Viewport height using JS</h1>
+    </div>
+    <div class="container py-5">
+        <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider>
+
+            <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid">
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?office" alt="">
+                        <div class="uk-position-center uk-panel"><h1>1</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?space" alt="">
+                        <div class="uk-position-center uk-panel"><h1>2</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?sandal" alt="">
+                        <div class="uk-position-center uk-panel"><h1>3</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?mint" alt="">
+                        <div class="uk-position-center uk-panel"><h1>4</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?panel" alt="">
+                        <div class="uk-position-center uk-panel"><h1>5</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?office" alt="">
+                        <div class="uk-position-center uk-panel"><h1>6</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?space" alt="">
+                        <div class="uk-position-center uk-panel"><h1>7</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?sandal" alt="">
+                        <div class="uk-position-center uk-panel"><h1>8</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?mint" alt="">
+                        <div class="uk-position-center uk-panel"><h1>9</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?panel" alt="">
+                        <div class="uk-position-center uk-panel"><h1>10</h1></div>
+                    </div>
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider>
+
+            <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid">
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?office" alt="">
+                        <div class="uk-position-center uk-panel"><h1>1</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?space" alt="">
+                        <div class="uk-position-center uk-panel"><h1>2</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?sandal" alt="">
+                        <div class="uk-position-center uk-panel"><h1>3</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?mint" alt="">
+                        <div class="uk-position-center uk-panel"><h1>4</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?panel" alt="">
+                        <div class="uk-position-center uk-panel"><h1>5</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?office" alt="">
+                        <div class="uk-position-center uk-panel"><h1>6</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?space" alt="">
+                        <div class="uk-position-center uk-panel"><h1>7</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?sandal" alt="">
+                        <div class="uk-position-center uk-panel"><h1>8</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?mint" alt="">
+                        <div class="uk-position-center uk-panel"><h1>9</h1></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?panel" alt="">
+                        <div class="uk-position-center uk-panel"><h1>10</h1></div>
+                    </div>
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider="clsActivated: uk-transition-active; center: true">
+            <ul class="uk-slider-items uk-grid">
+                <li class="uk-width-3-4">
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?mint" alt="">
+                        <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                            <h3 class="uk-margin-remove">Bottom</h3>
+                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="uk-width-3-4">
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?red" alt="">
+                        <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                            <h3 class="uk-margin-remove">Bottom</h3>
+                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="uk-width-3-4">
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?green" alt="">
+                        <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                            <h3 class="uk-margin-remove">Bottom</h3>
+                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="uk-width-3-4">
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?blue" alt="">
+                        <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                            <h3 class="uk-margin-remove">Bottom</h3>
+                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="uk-width-3-4">
+                    <div class="uk-panel">
+                        <img src="https://source.unsplash.com/1920x1080/?pink" alt="">
+                        <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                            <h3 class="uk-margin-remove">Bottom</h3>
+                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div uk-slider>
+
+            <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-light">
+                <li class="uk-transition-toggle">
+                    <img src="https://source.unsplash.com/1920x1080/?red" alt="">
+                    <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">1</h1></div>
+                </li>
+                <li class="uk-transition-toggle">
+                    <img src="https://source.unsplash.com/1920x1080/?pink" alt="">
+                    <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">2</h1></div>
+                </li>
+                <li class="uk-transition-toggle">
+                    <img src="https://source.unsplash.com/1920x1080/?black" alt="">
+                    <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">3</h1></div>
+                </li>
+                <li class="uk-transition-toggle">
+                    <img src="https://source.unsplash.com/1920x1080/?orange" alt="">
+                    <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">4</h1></div>
+                </li>
+                <li class="uk-transition-toggle">
+                    <img src="https://source.unsplash.com/1920x1080/?amaze" alt="">
+                    <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">5</h1></div>
+                </li>
+                <li class="uk-transition-toggle">
+                    <img src="https://source.unsplash.com/1920x1080/?hanky" alt="">
+                    <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">6</h1></div>
+                </li>
+                <li class="uk-transition-toggle">
+                    <img src="https://source.unsplash.com/1920x1080/?chief" alt="">
+                    <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">7</h1></div>
+                </li>
+                <li class="uk-transition-toggle">
+                    <img src="https://source.unsplash.com/1920x1080/?laptop" alt="">
+                    <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">8</h1></div>
+                </li>
+                <li class="uk-transition-toggle">
+                    <img src="https://source.unsplash.com/1920x1080/?white" alt="">
+                    <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">9</h1></div>
+                </li>
+                <li class="uk-transition-toggle">
+                    <img src="https://source.unsplash.com/1920x1080/?scale" alt="">
+                    <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">10</h1></div>
+                </li>
+            </ul>
+
+            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="uk-child-width-expand@s uk-text-center" uk-grid="parallax: 150">
+            <div>
+                <div class="uk-card-default p-3 mb-30">
+                    <img src="https://source.unsplash.com/1920x1080/?scale" alt="">
+                </div>
+                <div class="uk-card-default p-3 mb-30">
+                    <img src="https://source.unsplash.com/1920x1080/?scale" alt="">
+                </div>
+                <div class="uk-card-default p-3 mb-30">
+                    <img src="https://source.unsplash.com/1920x1080/?scale" alt="">
+                </div>
+            </div>
+            <div>
+                <div class="uk-card-default p-3 mb-30">
+                    <img src="https://source.unsplash.com/1920x1080/?scale" alt="">
+                </div>
+                <div class="uk-card-default p-3 mb-30">
+                    <img src="https://source.unsplash.com/1920x1080/?scale" alt="">
+                </div>
+                <div class="uk-card-default p-3 mb-30">
+                    <img src="https://source.unsplash.com/1920x1080/?scale" alt="">
+                </div>
+            </div>
+            <div>
+                <div class="uk-card-default p-3 mb-30">
+                    <img src="https://source.unsplash.com/1920x1080/?scale" alt="">
+                </div>
+                <div class="uk-card-default p-3 mb-30">
+                    <img src="https://source.unsplash.com/1920x1080/?scale" alt="">
+                </div>
+                <div class="uk-card-default p-3 mb-30">
+                    <img src="https://source.unsplash.com/1920x1080/?scale" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true; parallax: 150">
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 200px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 120px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 200px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 120px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 200px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 120px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 200px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 120px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 200px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 120px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 200px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 120px">Item</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.22/js/uikit.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.22/js/uikit-icons.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.header').height($(window).height());
+        })
+    </script>
+</body>
+
+</html>
