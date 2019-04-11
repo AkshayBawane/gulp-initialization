@@ -1,120 +1,134 @@
 'use strict';
 
-var gulp = require('gulp');
-var gulpLoadPlugins = require('gulp-load-plugins');
-var browserSync = require('browser-sync');
-var del = require('del');
-var concat = require('gulp-concat');
-
-
+const gulp = require('gulp');
+const gulpLoadPlugins = require('gulp-load-plugins');
 const $ = gulpLoadPlugins();
+const browserSync = require('browser-sync');
+const cleanCSS = require('gulp-clean-css');
+const del = require('del');
 const reload = browserSync.reload;
 
+// const purgecss = require('gulp-purgecss');
+// const uglify = require('gulp-uglify');
+// const order = require("gulp-order");
+// const concat = require("gulp-concat");
+// const concat = require('gulp-concat');
+// const sass = require('gulp-sass');
+// const gzip = require('gulp-gzip');
+// const autoprefixer = require('autoprefixer');
+// const rename = require('gulp-rename');
+// const plumber = require('gulp-plumber');
 
-
+// Delete the previous build before dry run.
+gulp.task('clean-build', () => {
+	del.sync(['build/**'])
+});
 
 // To compile Sass files
-gulp.task('styles', () => {
-	return gulp.src('sass/*.scss')
-	// return gulp.src(['sass/*.scss', 'css/**/*.css'])
+gulp.task('sass-styles', () => {
+	gulp.src(['assets/sass/*.scss'])
 		.pipe($.plumber())
-		// .pipe($.sourcemaps.init())
-		.pipe($.sass.sync({
-			outputStyle: 'expanded',
-			precision: 10,
-			includePaths: ['.']
-		}).on('error', $.sass.logError))
-		.pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
-		// .pipe($.sourcemaps.write())
-		.pipe(gulp.dest('dist/css'))
-		.pipe($.cssnano())
-		.pipe($.rename({ suffix: '.min' }))
-		.pipe(gulp.dest('dist/css'))
+		// .pipe($.order([
+		// 	"assets/sass/scss-essentials/**/*.scss",
+		// 	"assets/sass/scss-plugins/**/*.scss",
+		// 	"assets/sass/**/*.scss",
+		// ]))
+		.pipe($.sass.sync({ outputStyle: 'expanded'}).on('error', $.sass.logError))
+		.pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
+		// .pipe(cleanCSS())
+		// .pipe($.purgecss({ content: ["assets/html/index.html"] }))
+		// .pipe($.uncss({ html: ['assets/html/index.html'] }))
+		.pipe($.concat('all-scss-files.css'))
+		.pipe(gulp.dest('build/css'))
+		// .pipe($.notify({ message: 'sass-styles task complete' }))
 		.on('end', reload);
-	}
-);
-
-// Works completely fine Don't remove it.
-gulp.task('concatcss', () => {
-  	return gulp.src(['css/**/*.css']) //select all files inside the folder.
-  		.pipe($.plumber())
-	    .pipe(concat('main-concat.css'))
-	    .pipe(gulp.dest('dist')) //Uncompressed output
-	    .pipe($.cssnano())
-	    .pipe($.rename({ suffix: '.min' }))
-	    .pipe(gulp.dest('dist')) //Compressed output
-	    .on('end', reload);
-	}
-);
-
-// To minify scripts. Don't change the order here.
-gulp.task('scripts', () => {
-  	return gulp.src(['js/**/*.js']) //select all files inside the folder.
-  	// return gulp.src(['./js/main.js', './js/bootstrap/bootstrap.js', './js/bootstrap/popper.min.js', '.js/jQuery/jquery-3.2.1.min.js']) //select selected files from folder
-  		.pipe($.plumber())
-	    .pipe(concat('main-concat.js'))
-	    .pipe(gulp.dest('dist')) //Uncompressed output
-		.pipe($.uglify({preserveComments: 'license'}))
-	    .pipe($.rename({ suffix: '.min' }))
-	    .pipe(gulp.dest('dist')) //Compressed output
-	    .on('end', reload);
-	}
-);
-
-// function lint(files, options) {
-// 	return () => {
-// 		return gulp.src(files)
-// 		.pipe(reload({stream: true, once: true}))
-// 		.pipe($.eslint(options))
-// 		.pipe($.eslint.format())
-// 		.pipe($.if(!browserSync.active, $.eslint.failAfterError()));
-// 	};
-// }
-
-// gulp.task('lint', lint('js/*.js'));
-
-// Uncomment following if you want to minify HTML files
-/*
-gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src('*.html')
-    .pipe($.htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('minified-html'));
 });
-*/
+
+// To compile CSS files
+// gulp.task('css-styles', () => {
+// 	gulp.src(['assets/css/**/*.css', '!assets/css/**/*.min.css'])
+// 		.pipe($.plumber())
+// 		.pipe($.order([
+// 			"css-essentials/**/*.css",
+// 			"css-plugins/**/*.css"
+// 		]))
+// 		.pipe(cleanCSS())
+// 		.pipe($.concat('all-css-plugins.css'))
+// 		.pipe(gulp.dest('build/css'))
+		// .pipe($.notify({ message: 'css-styles task complete' }))
+// 		.on('end', reload);
+// });
+
+// Concat All Css files to create one file.
+// gulp.task('concat-styles', () => {
+// 	gulp.src(['assets/css/css-plugins/**/*.css', 'assets/css/all-scss-files.css'])
+// 		.pipe($.plumber())
+// 		.pipe(cleanCSS())
+// 		.pipe($.concat('all-fileszzzzzzzz.css'))
+// 		.pipe(gulp.dest('build/css'))
+// });
+
+// To minify javascript. Don't change the order here.
+gulp.task('javascript', () => {
+	gulp.src(['assets/js/**/*.js', '!assets/js/**/*.min.js'])
+		.pipe($.plumber())
+		.pipe($.order([
+			"js-essentials/**/*.js",
+			"js-plugins/**/*.js"
+		]))
+		.pipe($.uglify({mangle: false}))
+		.pipe($.concat('js-plugins.js', { newLine: '\n;' }))
+		.pipe(gulp.dest('build/js'))
+		// .pipe($.notify({ message: 'javascript task complete' }))
+		.on('end', reload);
+});
+
+// To minify HTML files.
+gulp.task('html-minify', () => {
+	gulp.src('*.html')
+		.pipe($.htmlmin({
+			collapseWhitespace: true
+		}))
+		.pipe(gulp.dest('build'))
+		// .pipe($.notify({ message: 'html-minify task complete' }));
+});
 
 // Task to minify images
-gulp.task('images', () => {
-	return gulp.src('img/**/*')
-		.pipe($.cache($.imagemin({
-		progressive: true,
-		interlaced: true,
-		// don't remove IDs from SVGs, they are often used
-		// as hooks for embedding and styling
-		svgoPlugins: [{cleanupIDs: false}]
-		})))
-    .pipe(gulp.dest('images-min'));
+gulp.task('images-optimise', () => {
+	gulp.src('assets/images/**/*')
+		.pipe($.cache($.imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+		.pipe(gulp.dest('build/images'))
+		// .pipe($.notify({ message: 'images-optimise task complete' }));
 });
 
-// Task to serve everything with browserSync (except images)
-gulp.task('serve', ['styles', 'scripts', 'concatcss'], () => {
+gulp.task('browser-sync', function() {
 	browserSync({
+		watch: true,
 		notify: false,
 		port: 9000,
 		server: {
-		    baseDir: ['./']
-		}
+			// baseDir: ['./'],
+			// index: ['./assets/html/index.html'],
+			startPath: ['./assets/html/index.html'],
+			directory: true
+		},
+		// callbacks: {
+		// 	ready: function(err, bs) {
+		// 		bs.addMiddleware("*", function (req, res) {
+		// 			res.writeHead(302, {
+		// 				location: "404.html"
+		// 			});
+		// 			res.end("Redirecting!");
+		// 		});
+		// 	}
+		// }
 	});
-
-	gulp.watch([
-		'*.html',
-		'images/**/*',
-		'fonts/**/*'
-	]).on('change', reload);
-
-	gulp.watch('sass/**/*.scss', ['styles']);
-	gulp.watch('js/**/*.js', ['scripts']);
 });
 
-gulp.task('default', () => {
-  	gulp.start('serve');
+gulp.task('watch', ['clean-build', 'sass-styles', 'javascript', 'browser-sync', 'images-optimise'], () => {
+	gulp.watch('assets/sass/**/*.scss', ['sass-styles']);
+	gulp.watch('assets/js/**/*.js', ['javascript']);
+	gulp.watch('assets/html/**/*.html', browserSync.reload);
 });
+
+gulp.task('default', ['watch']);
