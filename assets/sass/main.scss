@@ -28,16 +28,6 @@
 # 1. Import Files
 --------------------------------------------------*/
 
-// Import Google Web Fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,400i,500,600,700,800,900');
-@import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,400i,600,700,800,900');
-@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,400i,500,600,700,800');
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,400i,700');
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,400i,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,600,700');
-
 // Handwriting Font
 @import url('https://fonts.googleapis.com/css?family=Tangerine:400,700');
 @import url('https://fonts.googleapis.com/css?family=Alex+Brush');
@@ -53,6 +43,7 @@
 @import "./scss-plugins/perfect-scrollbar.scss";
 
 // // Scss Theme
+@import "./scss-theme/font-family";
 @import "./scss-theme/bg-image";
 @import "./scss-theme/color-classes";
 @import "./scss-theme/helpers";
@@ -76,7 +67,6 @@ body {
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
     overflow-y: scroll;
-    letter-spacing: .1px; //depends upon font used
 }
 a {
     outline: none;
@@ -92,12 +82,12 @@ a:focus {
 /*--------------------------------------------------
 # 4. Browser Scrollbar
 --------------------------------------------------*/
-body, .side {
-    &::-webkit-scrollbar {
-        width: 5px;
-        height: 5px;
-        display: none;
-    }
+// body {
+//     &::-webkit-scrollbar {
+//         width: 5px;
+//         height: 5px;
+//         display: none;
+//     }
 //     &::-webkit-scrollbar-button {
 //         width: 0px;
 //         height: 0px;
@@ -127,7 +117,7 @@ body, .side {
 //     &::-webkit-scrollbar-corner {
 //         background: transparent;
 //     }
-}
+// }
 
 
 /*--------------------------------------------------

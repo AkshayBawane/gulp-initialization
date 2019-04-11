@@ -35,7 +35,7 @@ gulp.task('sass-styles', () => {
 		// ]))
 		.pipe($.sass.sync({ outputStyle: 'expanded'}).on('error', $.sass.logError))
 		.pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
-		// .pipe(cleanCSS())
+		.pipe(cleanCSS())
 		// .pipe($.purgecss({ content: ["assets/html/index.html"] }))
 		// .pipe($.uncss({ html: ['assets/html/index.html'] }))
 		.pipe($.concat('all-scss-files.css'))
@@ -85,7 +85,7 @@ gulp.task('javascript', () => {
 
 // To minify HTML files.
 gulp.task('html-minify', () => {
-	gulp.src('*.html')
+	gulp.src('assets/html/**/*.html')
 		.pipe($.htmlmin({
 			collapseWhitespace: true
 		}))
@@ -125,7 +125,7 @@ gulp.task('browser-sync', function() {
 	});
 });
 
-gulp.task('watch', ['clean-build', 'sass-styles', 'javascript', 'browser-sync', 'images-optimise'], () => {
+gulp.task('watch', ['clean-build', 'sass-styles', 'javascript', 'browser-sync', 'images-optimise', 'html-minify'], () => {
 	gulp.watch('assets/sass/**/*.scss', ['sass-styles']);
 	gulp.watch('assets/js/**/*.js', ['javascript']);
 	gulp.watch('assets/html/**/*.html', browserSync.reload);
