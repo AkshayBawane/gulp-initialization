@@ -1,10 +1,10 @@
-/*--------------------------------------------------
+/* ———————————————————————————————————————————————
 # main.scss
 # Sass file for a Launchpad template.
 # Author: Galacticlab
---------------------------------------------------*/
+————————————————————————————————————————————————— */
 
-/*--------------------------------------------------
+/* ———————————————————————————————————————————————
 [TABLE OF CONTENTS]
 # 1. Import Files
 # 2. Initialization
@@ -22,37 +22,38 @@
 # 14. Image Overlay Text Used In GAlLERY Lightbox
 # 15. Background Diagonal Edge
 # 16. Miscellaneous
---------------------------------------------------*/
+————————————————————————————————————————————————— */
 
-/*--------------------------------------------------
+/* ———————————————————————————————————————————————
 # 1. Import Files
---------------------------------------------------*/
+————————————————————————————————————————————————— */
 
 // Handwriting Font
 @import url('https://fonts.googleapis.com/css?family=Tangerine:400,700');
 @import url('https://fonts.googleapis.com/css?family=Alex+Brush');
 
 // Scss Essentials
-@import "./scss-essentials/scss-bootstrap/bootstrap.scss";
+@import "./scss-essentials/scss-bootstrap/bootstrap";
 
 // Scss Plugins
-// @import "./scss-plugins/floating-background-shapes-animation.scss";
-@import "./scss-plugins/image-gallery/simplelightbox.scss";
-@import "./scss-plugins/progressive-image.scss";
-@import "./scss-plugins/swiper-slider.scss";
-@import "./scss-plugins/perfect-scrollbar.scss";
+@import "./scss-plugins/image-gallery/simplelightbox";
+@import "./scss-plugins/progressive-image";
+@import "./scss-plugins/swiper-slider";
+@import "./scss-plugins/perfect-scrollbar";
+@import "./scss-plugins/animate-on-scroll";
 
 // // Scss Theme
-@import "./scss-theme/font-family";
 @import "./scss-theme/bg-image";
+@import "./scss-theme/bootstrap-custom";
+@import "./scss-theme/font-family";
 @import "./scss-theme/color-classes";
 @import "./scss-theme/helpers";
 @import "./scss-theme/typography";
 @import "./scss-theme/variables";
 
-/*--------------------------------------------------
+/* ———————————————————————————————————————————————
 # 2. Initialization
---------------------------------------------------*/
+————————————————————————————————————————————————— */
 html, body {
     width: 100%;
     height: 100%;
@@ -79,9 +80,9 @@ a:hover,
 a:focus {
     text-decoration: none;
 }
-/*--------------------------------------------------
+/* ———————————————————————————————————————————————
 # 4. Browser Scrollbar
---------------------------------------------------*/
+————————————————————————————————————————————————— */
 // body {
 //     &::-webkit-scrollbar {
 //         width: 5px;
@@ -120,9 +121,9 @@ a:focus {
 // }
 
 
-/*--------------------------------------------------
+/* ———————————————————————————————————————————————
 # 5. Scroll To Top
---------------------------------------------------*/
+————————————————————————————————————————————————— */
 .scroll-top {
     .fa {
         color: gray;
@@ -142,42 +143,20 @@ a:focus {
     transition: all .3s ease-in-out;
 }
 
-input {
-	&:focus {
-		outline: 0;
-	}
-}
+// input {
+// 	&:focus {
+// 		outline: 0;
+// 	}
+// }
 
 textarea {
     outline: 0;
     max-width: 100%;
-	&:focus {
-		outline: 0;
-	}
 }
 
-.btn, button {
-    display: inline-block;
-    padding: .84rem 2.14rem;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
-    border-radius: .25rem;
-    line-height: 16px;
-    &:hover {
-        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
-    }
-    &:focus,
-    &:active {
-        outline: none;
-    }
+*:focus, *:active {
+    outline: 0;
 }
-
-// $highlight: green;
-// p { color: lighten( $highlight, 20% ); }
-// p { color: darken( $highlight, 10% ); }
-// p { color: fade-out( $highlight, 0.5 ); }
-// p { color: adjust-hue( $highlight, 90 ); } // Usually between -360 degrees and 360 degrees.
-// p { color: red + blue; } // Compiles to magenta.
-
 
 @media (max-width: 575.99px) {}
 @media (min-width: 575.99px) {}
@@ -190,69 +169,18 @@ textarea {
 
 @media (min-width: 992px) and (max-width: 1199.99px) {}
 
-
-
-.prefix-filter {
-    display: flex;
-}
-
-.cssshort-section {
-    text: #333 bold justify uppercase 1.25em 1.7 .05em;
-}
-.cssnext-link {
-    color: color(blue alpha(-10%));
-}
-.cssnext-link:hover {
-    color: color(orange blackness(80%));
-}
-
-
-
-
-/* ———————————————————————————————————————————————————————————————————————
+/* ———————————————————————————————————————————————
    Define Variable Values
-——————————————————————————————————————————————————————————————————————— */
+————————————————————————————————————————————————— */
 :root {
-    /* Existing AdminCss Values */
-    /* --border-color: #dee2e6; */
-    --border-radius: 3px;
-    --font-size: 12px;
-    /* --bottom-margin: 20px; */
-    --placeholder-color: #ccc;
-    --active-color: #4A90E2;
-    --light-gray: #F5F6F7;
-    --hr-line: #D5D7DC;
-    --nav-color: #293846;
-    --nav-item-color: #5B5B5B;
-    /* --font-family: 'Open Sans', sans-serif; */ /* disable it */
-    --help-text-color: #5C5C5C;
-    --table-header: #E9ECF0;
-    --hover-color: #E9ECF0;
-
-    /* New used Values as per design */
-    --form-mb: 16px; /* used in form bottom spacing */
-    --input-lh: 34px; /* used to align input field and label */
-    --p-font-size: 13px; /* used in text link; This should be <p> tag size */
+    --form-mb: 16px;
+    --p-font-size: 13px;
     --text-gray: #9a9d9d;
-    --border-color: #ccc; /* default bootstrap color*/
-    /* New color code for sample as per design */
     --bg-faded: #eee;
     --bg-red: #e73631;
     --bg-white: #fff;
-    --bg-pink: #e46481;
-    --bg-gray: #7f7f7f;
-    --bg-gold: #ecb718;
-    --bg-green: #439242;
-    --bg-black: #121212;
-    --bg-orange: #e8722e;
-    --bg-yellow: #e8ca6b;
-    --bg-lavender: #9261a0;
-    --bg-light-blue: #308ee0;
-    --bg-royal-blue: #35568e;
-    --bg-light-green: #80cb7f;
 
     --color-dark: #494949;
-
     --color-primary: #428bca;
     --color-success: #5cb85c;
     --color-info: #5bc0de;
@@ -268,9 +196,10 @@ textarea {
 
 .form-group { margin-bottom: var(--form-mb); }
 .form-control, input.form-control { border-radius: var(--border-radius); } /* Input Field Border Radius */
-/* ———————————————————————————————————————————————————————————————————————
+
+/* ———————————————————————————————————————————————
    Utility Classes
-——————————————————————————————————————————————————————————————————————— */
+————————————————————————————————————————————————— */
 *:focus { outline: 0 !important; }
 .align-items-center { display: flex; align-items: center !important; }
 .justify-content-center { display: flex; justify-content: center !important; }
@@ -299,31 +228,12 @@ textarea {
 .bg-faded { background-color: var(--bg-faded) !important; }
 .bg-red, .vacutainer-clr-red { background-color: var(--bg-red) !important; }
 .bg-white, .vacutainer-clr-white { background-color: var(--bg-white) !important; }
-.bg-pink, .vacutainer-clr-pink { background-color: var(--bg-pink) !important; }
-.bg-gray, .vacutainer-clr-gray { background-color: var(--bg-gray) !important; }
-.bg-gold, .vacutainer-clr-gold { background-color: var(--bg-gold) !important; }
-.bg-green, .vacutainer-clr-green { background-color: var(--bg-green) !important; }
-.bg-black, .vacutainer-clr-black { background-color: var(--bg-black) !important; }
-.bg-orange, .vacutainer-clr-orange { background-color: var(--bg-orange) !important; }
-.bg-yellow, .vacutainer-clr-yellow { background-color: var(--bg-yellow) !important; }
-.bg-lavender, .vacutainer-clr-lavender { background-color: var(--bg-lavender) !important; }
-.bg-light-blue, .vacutainer-clr-light-blue { background-color: var(--bg-light-blue) !important; }
-.bg-royal-blue, .vacutainer-clr-royal-blue { background-color: var(--bg-royal-blue) !important; }
-.bg-light-green, .vacutainer-clr-light-green { background-color: var(--bg-light-green) !important; }
 
 .bg-transparent { background-color: transparent !important; }
 
-/* ———————————————————————————————————————————————————————————————————————
+/* ———————————————————————————————————————————————
 Define All Buttons Here
-——————————————————————————————————————————————————————————————————————— */
-/* Tranparent button for text only */
-.btn-transparent { background-color: transparent; border: 1px solid transparent; color: var(--text-gray); }
-.btn-transparent:hover, .btn-transparent:focus, .btn-transparent:active { border: 1px solid transparent; cursor: pointer; background-color: transparent; color: #333; }
-.btn:active, .btn.active { box-shadow: none !important; }
-
-/* Text link button */
-button[type=button].text-link { color: #428bca; border: none; line-height: var(--input-lh); font-size: var(--p-font-size); padding: 0; margin: 0; font-weight: var(--fw-normal); }
-button[type=button].text-link:hover, button[type=button].text-link:focus { background-color: transparent; }
+————————————————————————————————————————————————— */
 
 /* Hover all button */
 button, select, .btn, input[type=button], input[type=file], .img-link, .text-link { transition: 0.3s; cursor: pointer; }

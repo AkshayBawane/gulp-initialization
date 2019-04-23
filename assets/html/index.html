@@ -3,17 +3,19 @@
 
 <head>
 	<meta charset="UTF-8">
-  	<meta name="description" content="Coming Soon Responsive Templates">
+	<meta name="description" content="Coming Soon Responsive Templates">
 	<meta name="keywords" content="HTML,CSS,Web,Responsive,Templates">
 	<meta name="author" content="qwerty">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no user-scalable=0" />
 	<title>Home</title>
 
-	<!-- ========== Theme CSS ========== -->
-	<!-- <link rel="stylesheet" type="text/css" href="/build/css/all-css-plugins.css" media="none" onload="if(media!='all')media='all'"> -->
+	<!-- ✴✴✴✴✴✴✴✴✴✴ Theme CSS ✴✴✴✴✴✴✴✴✴✴ -->
 	<link rel="stylesheet" type="text/css" href="../../build/css/all-scss-files.css">
 
-	<!-- Font Awesome -->
+	<!-- <link rel="stylesheet" type="text/css" href="../../build/css/all-scss-files.css" media="none" onload="if(media!='all')media='all'"> -->
+
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css'>
+	<!-- ✴✴✴✴✴✴✴✴✴✴ Font Awesome ✴✴✴✴✴✴✴✴✴✴ -->
 	<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
 </head>
 
@@ -21,45 +23,82 @@
 	<div class="wrapper" style="height: 100%">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container">
-				<a class="navbar-brand" href="#">Bootstrap</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<a class="navbar-brand" href="#">Navbar</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<div class="navbar-nav">
-					<a class="nav-item nav-link active" href="#">Home</a>
-					<a class="nav-item nav-link" href="#">About</a>
-					<a class="nav-item nav-link" href="#">News</a>
-					<a class="nav-item nav-link" href="#">Features</a>
-					<a class="nav-item nav-link" href="#">Contact</a>
-					</div>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								News
+							</a>
+							<div class="dropdown-menu animated flipInY" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Career</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Contact</a>
+						</li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form>
 				</div>
 			</div>
 		</nav>
-		<section class="d-flex justify-content-center align-items-center text-center" style="background: pink; height: calc(100% - 56px)">
+		<section class="d-flex justify-content-center align-items-center"
+			style="background: whitesmoke; height: calc(100% - 56px)">
 			<div class='container'>
-				<div class='row align-items-center'> 
+				<div class='row align-items-center'>
 					<div class='col-md-6'>
+						<h3 class="font-nunito">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, distinctio numquam.?</h3>
 						<p>Eiusmod accumsan et morbi blanditiis ridiculus anim dolorum augue aspernatur, molestiae consectetur? Sequi lectus dolor! Perferendis. Mauris esse fames cumque? Expedita quae turpis? Urna, hic nemo eaque ultrices gravida labore, platea vehicula luctus quaerat, ligula! Sint pede odit inceptos feugiat! Ratione ultricies pulvinar ullamcorper, libero.</p>
 					</div>
-					<div class='col-md-6' data-tilt>
-						<img src='https://source.unsplash.com/1920x1080/?office' class="img-fluid" alt=''>
+					<div class='col-md-6'>
+						<img src='https://source.unsplash.com/1920x1080/?office' data-tilt class="img-fluid" alt=''>
 					</div>
 				</div>
 			</div>
 		</section>
-		
 		<div class="container my-5">
-			<h3 class="font-nunito">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, distinctio numquam. Quis exercitationem velit distinctio, cupiditate officia beatae atque consectetur quae voluptatibus, expedita nisi tempore iusto fugiat similique inventore ad?</h3>
-			<h4 class="py-5">qwwwwwwwwerty</h4>
-			<h4 class="py-5">qwwwwwwwwerty</h4>
-			<h4 class="py-5">qwwwwwwwwerty</h4>
-			<h4 class="py-5">qwwwwwwwwerty</h4>
-			<h4 class="py-5">qwwwwwwwwerty</h4>
-			<h4 class="py-5">qwwwwwwwwerty</h4>
-			<h4 class="py-5">qwwwwwwwwerty</h4>
-			<h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum maxime sed incidunt odit iste facere veniam cupiditate ducimus, aspernatur laborum magni voluptatem harum corrupti sint quisquam, libero, in amet. Beatae!</h5>
-			<h6>qwerty</h6>
+			<div class='col-md-8 mx-auto py-5'>
+				<h3 class="font-nunito">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, distinctio numquam. Quis exercitationem velit distinctio, cupiditate officia beatae atque consectetur quae voluptatibus, expedita nisi tempore iusto fugiat similique inventore ad?</h3>
+				<h1>h1 Lorem ipsum dolor sit amet consectetur.</h1>
+				<h2>h2 Lorem ipsum dolor sit amet consectetur.</h2>
+				<h3>h3 Lorem ipsum dolor sit amet consectetur.</h3>
+				<h4>h4 Lorem ipsum dolor sit amet consectetur.</h4>
+				<h5>h5 Lorem ipsum dolor sit amet consectetur.</h5>
+				<h6>h6 Lorem ipsum dolor sit amet consectetur.</h6>
+				<p data-aos-duration="1500" data-aos="fade-left">Placerat? Leo tincidunt mollitia eligendi nibh, pede debitis illum laoreet adipisci reprehenderit, tincidunt pretium, massa eiusmod modi distinctio pellentesque sem egestas asperiores, interdum delectus. Ipsum congue occaecat faucibus similique quae, aute quisque suspendisse quasi nulla minim, nibh autem repellat, quisque, vivamus! Parturient, nostrum quia? Consequuntur.</p>
+				<p data-aos-duration="1500" data-aos="fade-right">Bibendum hic aliquip ratione fugiat. Litora commodo imperdiet, fugiat mollitia totam sit! Ridiculus nostrum, condimentum voluptatem, exercitationem at morbi quam vel orci cras animi? Tempora similique! Dignissim soluta cum ac corporis vehicula mattis feugiat quam! Senectus dolorum libero est inceptos minus proin, fringilla est odit.</p>
+				<p data-aos-duration="1500" data-aos="fade-left">Cursus minus odit facilis quisquam tincidunt, reprehenderit hic wisi id magni ornare delectus scelerisque maiores, suspendisse occaecati ornare accusantium hac elit, fames congue class dolores molestiae bibendum viverra. Doloremque qui proin culpa perspiciatis elit! Viverra magni dis dui quod architecto lacus quibusdam! Incididunt nonummy felis.</p>
+				<p data-aos-duration="1500" data-aos="fade-right">Placerat? Leo tincidunt mollitia eligendi nibh, pede debitis illum laoreet adipisci reprehenderit, tincidunt pretium, massa eiusmod modi distinctio pellentesque sem egestas asperiores, interdum delectus. Ipsum congue occaecat faucibus similique quae, aute quisque suspendisse quasi nulla minim, nibh autem repellat, quisque, vivamus! Parturient, nostrum quia? Consequuntur.</p>
+				<p data-aos-duration="1500" data-aos="fade-left">Bibendum hic aliquip ratione fugiat. Litora commodo imperdiet, fugiat mollitia totam sit! Ridiculus nostrum, condimentum voluptatem, exercitationem at morbi quam vel orci cras animi? Tempora similique! Dignissim soluta cum ac corporis vehicula mattis feugiat quam! Senectus dolorum libero est inceptos minus proin, fringilla est odit.</p>
+				<p data-aos-duration="1500" data-aos="fade-right">Cursus minus odit facilis quisquam tincidunt, reprehenderit hic wisi id magni ornare delectus scelerisque maiores, suspendisse occaecati ornare accusantium hac elit, fames congue class dolores molestiae bibendum viverra. Doloremque qui proin culpa perspiciatis elit! Viverra magni dis dui quod architecto lacus quibusdam! Incididunt nonummy felis.</p>
+				<p data-aos-duration="1500" data-aos="fade-left">Placerat? Leo tincidunt mollitia eligendi nibh, pede debitis illum laoreet adipisci reprehenderit, tincidunt pretium, massa eiusmod modi distinctio pellentesque sem egestas asperiores, interdum delectus. Ipsum congue occaecat faucibus similique quae, aute quisque suspendisse quasi nulla minim, nibh autem repellat, quisque, vivamus! Parturient, nostrum quia? Consequuntur.</p>
+				<p data-aos-duration="1500" data-aos="fade-right">Bibendum hic aliquip ratione fugiat. Litora commodo imperdiet, fugiat mollitia totam sit! Ridiculus nostrum, condimentum voluptatem, exercitationem at morbi quam vel orci cras animi? Tempora similique! Dignissim soluta cum ac corporis vehicula mattis feugiat quam! Senectus dolorum libero est inceptos minus proin, fringilla est odit.</p>
+				<p data-aos-duration="1500" data-aos="fade-left">Cursus minus odit facilis quisquam tincidunt, reprehenderit hic wisi id magni ornare delectus scelerisque maiores, suspendisse occaecati ornare accusantium hac elit, fames congue class dolores molestiae bibendum viverra. Doloremque qui proin culpa perspiciatis elit! Viverra magni dis dui quod architecto lacus quibusdam! Incididunt nonummy felis.</p>
+				<p data-aos-duration="1500" data-aos="fade-right">Placerat? Leo tincidunt mollitia eligendi nibh, pede debitis illum laoreet adipisci reprehenderit, tincidunt pretium, massa eiusmod modi distinctio pellentesque sem egestas asperiores, interdum delectus. Ipsum congue occaecat faucibus similique quae, aute quisque suspendisse quasi nulla minim, nibh autem repellat, quisque, vivamus! Parturient, nostrum quia? Consequuntur.</p>
+				<p data-aos-duration="1500" data-aos="fade-left">Bibendum hic aliquip ratione fugiat. Litora commodo imperdiet, fugiat mollitia totam sit! Ridiculus nostrum, condimentum voluptatem, exercitationem at morbi quam vel orci cras animi? Tempora similique! Dignissim soluta cum ac corporis vehicula mattis feugiat quam! Senectus dolorum libero est inceptos minus proin, fringilla est odit.</p>
+				<p data-aos-duration="1500" data-aos="fade-right">Cursus minus odit facilis quisquam tincidunt, reprehenderit hic wisi id magni ornare delectus scelerisque maiores, suspendisse occaecati ornare accusantium hac elit, fames congue class dolores molestiae bibendum viverra. Doloremque qui proin culpa perspiciatis elit! Viverra magni dis dui quod architecto lacus quibusdam! Incididunt nonummy felis.</p>
+			</div>
 			<div class='row' style="margin: 200px 0">
 				<div class='col-md-6'>
 					<style>
@@ -72,27 +111,32 @@
 							clip-path: polygon(50% 0%, 100% 30%, 50% 100%, 0% 30%);
 							animation: polygons 20s infinite;
 						}
-						
+
 						@keyframes polygons {
 							0% {
 								clip-path: polygon(50% 0%, 100% 30%, 50% 100%, 0% 30%);
 							}
+
 							25% {
 								clip-path: polygon(30% 100%, 30% 0%, 60% 0%, 100% 100%);
 								border-radius: 73% 27% 79% 21% / 51% 62% 38% 49%;
 							}
+
 							50% {
 								clip-path: polygon(0% 100%, 30% 0%, 70% 0%, 100% 100%);
 								border-radius: 50%;
 							}
+
 							75% {
 								clip-path: polygon(0% 100%, 30% 0%, 100% 0%, 70% 100%);
 							}
 						}
+
 					</style>
 					<div class="animate__border_radius animate__border_radius_center">
 						<!-- <img src="https://source.unsplash.com/200x200/?coffee" class="img-fluid" alt="..."> -->
-						<img src="https://image.flaticon.com/icons/svg/174/174876.svg" style="height: 150px" class="img-fluid" alt="...">
+						<img src="https://image.flaticon.com/icons/svg/174/174876.svg" style="height: 150px"
+							class="img-fluid" alt="...">
 					</div>
 				</div>
 				<div class='col-md-6' style="background: #f5f5f5">
@@ -101,6 +145,7 @@
 							position: relative;
 							display: inline-block;
 						}
+
 						.animate__border_radius::after {
 							position: absolute;
 							content: '';
@@ -114,34 +159,41 @@
 							background-size: 400% 400%;
 							animation: scale 10s ease infinite;
 						}
+
 						.animate__border_radius_center::after {
 							top: 50%;
 							left: 50%;
 							transform: translate(-50%, -50%);
 						}
+
 						@keyframes scale {
 							0% {
 								border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-								background-position:0% 50%
+								background-position: 0% 50%
 							}
+
 							50% {
 								border-radius: 17% 83% 24% 76% / 78% 78% 22% 22%;
 								background-image: linear-gradient(90deg, rgb(224, 220, 255) 0%, rgb(255, 195, 231) 100%);
 								transition: all 2s ease;
 								opacity: .25;
-								background-position:100% 50%
+								background-position: 100% 50%
 							}
+
 							60% {
 								border-radius: 40%;
 							}
+
 							75% {
 								border-radius: 73% 27% 79% 21% / 51% 62% 38% 49%;
 							}
+
 							100% {
 								border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-								background-position:0% 50%
+								background-position: 0% 50%
 							}
 						}
+
 					</style>
 					<div class="animate__bg_image"></div>
 				</div>
@@ -152,7 +204,8 @@
 						<img src="https://source.unsplash.com/1920x1080/?office" class="card-img-top" alt="...">
 						<div class="card-body">
 							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							<p class="card-text">This is a longer card with supporting text below as a natural lead-in
+								to additional content. This content is a little bit longer.</p>
 							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 						</div>
 					</div>
@@ -162,7 +215,8 @@
 						<img src="https://source.unsplash.com/1920x1080/?coffee" class="card-img-top" alt="...">
 						<div class="card-body">
 							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							<p class="card-text">This is a longer card with supporting text below as a natural lead-in
+								to additional content. This content is a little bit longer.</p>
 							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 						</div>
 					</div>
@@ -172,7 +226,8 @@
 						<img src="https://source.unsplash.com/1920x1080/?cards" class="card-img-top" alt="...">
 						<div class="card-body">
 							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							<p class="card-text">This is a longer card with supporting text below as a natural lead-in
+								to additional content. This content is a little bit longer.</p>
 							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 						</div>
 					</div>
@@ -206,47 +261,58 @@
 
 		<div class='container py-5'>
 			<div class="gallery">
-				<a href="../../build/images/image1.jpg" class="big"><img src="../../build/images/thumbs/thumb1.jpg" alt="" title="Beautiful Image" /></a>
-				<a href="../../build/images/image2.jpg"><img src="../../build/images/thumbs/thumb2.jpg" alt="" title=""/></a>
-				<a href="../../build/images/image3.jpg"><img src="../../build/images/thumbs/thumb3.jpg" alt="" title="Beautiful Image"/></a>
-				<a href="../../build/images/image4.jpg"><img src="../../build/images/thumbs/thumb4.jpg" alt="" title=""/></a>
+				<a href="../../build/images/image1.jpg" class="big"><img src="../../build/images/thumbs/thumb1.jpg"
+						alt="" title="Beautiful Image" /></a>
+				<a href="../../build/images/image2.jpg"><img src="../../build/images/thumbs/thumb2.jpg" alt=""
+						title="" /></a>
+				<a href="../../build/images/image3.jpg"><img src="../../build/images/thumbs/thumb3.jpg" alt=""
+						title="Beautiful Image" /></a>
+				<a href="../../build/images/image4.jpg"><img src="../../build/images/thumbs/thumb4.jpg" alt=""
+						title="" /></a>
 				<div class="clearfix"></div>
-	
-				<a href="../../build/images/image5.jpg"><img src="../../build/images/thumbs/thumb5.jpg" alt="" title=""/></a>
-				<a href="../../build/images/image6.jpg"><img src="../../build/images/thumbs/thumb6.jpg" alt="" title=""/></a>
-				<a href="../../build/images/image7.jpg" class="big"><img src="../../build/images/thumbs/thumb7.jpg" alt="" title=""/></a>
-				<a href="../../build/images/image8.jpg"><img src="../../build/images/thumbs/thumb8.jpg" alt="" title=""/></a>
+
+				<a href="../../build/images/image5.jpg"><img src="../../build/images/thumbs/thumb5.jpg" alt=""
+						title="" /></a>
+				<a href="../../build/images/image6.jpg"><img src="../../build/images/thumbs/thumb6.jpg" alt=""
+						title="" /></a>
+				<a href="../../build/images/image7.jpg" class="big"><img src="../../build/images/thumbs/thumb7.jpg"
+						alt="" title="" /></a>
+				<a href="../../build/images/image8.jpg"><img src="../../build/images/thumbs/thumb8.jpg" alt=""
+						title="" /></a>
 				<div class="clearfix"></div>
-	
-				<a href="../../build/images/image9.jpg" class="big"><img src="../../build/images/thumbs/thumb9.jpg" alt="" title=""/></a>
-				<a href="../../build/images/image10.jpg"><img src="../../build/images/thumbs/thumb10.jpg" alt="" title=""/></a>
-				<a href="../../build/images/image11.jpg"><img src="../../build/images/thumbs/thumb11.jpg" alt="" title=""/></a>
-				<a href="../../build/images/image12.jpg"><img src="../../build/images/thumbs/thumb12.jpg" alt="" title=""/></a>
+
+				<a href="../../build/images/image9.jpg" class="big"><img src="../../build/images/thumbs/thumb9.jpg"
+						alt="" title="" /></a>
+				<a href="../../build/images/image10.jpg"><img src="../../build/images/thumbs/thumb10.jpg" alt=""
+						title="" /></a>
+				<a href="../../build/images/image11.jpg"><img src="../../build/images/thumbs/thumb11.jpg" alt=""
+						title="" /></a>
+				<a href="../../build/images/image12.jpg"><img src="../../build/images/thumbs/thumb12.jpg" alt=""
+						title="" /></a>
 				<div class="clearfix"></div>
 			</div>
 		</div>
 
 		<footer>
 			<div class="scroll-top">
-                <i class="fa fa-arrow-up"></i>
-            </div>
+				<i class="fa fa-arrow-up"></i>
+			</div>
 		</footer>
 		<!-- footer -->
 	</div>
 	<!-- wrapper -->
 
-	<!-- ========== Common JS ========== -->
+	<!-- ✴✴✴✴✴✴✴✴✴✴ Common JS ✴✴✴✴✴✴✴✴✴✴ -->
 
-	<!-- ========= Theme JS ========= -->
+	<!-- ✴✴✴✴✴✴✴✴✴✴ Theme JS ✴✴✴✴✴✴✴✴✴✴ -->
 	<script src="../../build/js/js-plugins.js"></script>
 
-	<!-- ========== Page JS ========== -->
-
-	<!-- ======= Custom JS Code ======= -->
+	<!-- ✴✴✴✴✴✴✴✴✴✴ Custom JS Code ✴✴✴✴✴✴✴✴✴✴ -->
 	<script>
-		$(function() {
+		$(function () {
 			var $gallery = $('.gallery a').simpleLightbox();
 		});
+
 	</script>
 	<script>
 		$('.tilt').universalTilt({
@@ -254,10 +320,26 @@
 				shine: true,
 				'shine-opacity': 0.5,
 				'shine-save': true
-			  // options...
+				// options...
 			}
 		});
-	</script> 
+
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".dropdown, .btn-group").hover(function () {
+				var dropdownMenu = $(this).children(".dropdown-menu");
+				if (dropdownMenu.is(":visible")) {
+					dropdownMenu.parent().toggleClass("open");
+				}
+			});
+		});
+
+	</script>
+	<script>
+		AOS.init();
+
+	</script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
-/*----------------------------------------------------------------------------------------------------
+/* ——————————————————————————————————————————————————
 	helpers.scss
-----------------------------------------------------------------------------------------------------*/
+—————————————————————————————————————————————————— */
 // Google Web Fonts
 .font-dosis            { font-family: 'Dosis', sans-serif !important; }
 .font-roboto           { font-family: 'Roboto', sans-serif !important; }
@@ -271,7 +271,7 @@
 /*--------------------------------------------------
 # Spacing Classes
 --------------------------------------------------*/
-$spaceamounts: (5, 10, 15, 20, 25, 30);
+$spaceamounts: (6, 10, 15, 20, 25, 30);
 $sides: (top, bottom, left, right, all);
 @each $space in $spaceamounts {
     @each $side in $sides {
@@ -295,7 +295,7 @@ $sides: (top, bottom, left, right, all);
 }
 
 $verticalspace: 30;
-@while $verticalspace > 0 {
+@while $verticalspace > 5    {
     .py-#{$verticalspace}, .ptb-#{$verticalspace} { padding-top: #{$verticalspace}px !important; padding-bottom: #{$verticalspace}px !important; }
     .my-#{$verticalspace}, .mtb-#{$verticalspace} { margin-top: #{$verticalspace}px !important; margin-bottom: #{$verticalspace}px !important; }
     // .m-#{$verticalspace} { margin: $verticalspace;}
