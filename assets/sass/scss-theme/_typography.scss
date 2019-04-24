@@ -1,6 +1,6 @@
-/*----------------------------------------------------------------------------------------------------
+/* ——————————————————————————————————————————————————
 	typography.scss
-----------------------------------------------------------------------------------------------------*/
+—————————————————————————————————————————————————— */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
 p, a, li, blockquote, pre, address, button, input, optgroup, select, textarea, .fa {
@@ -10,10 +10,10 @@ body {
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
 }
-// h1, h2, h3, h4, h5, h6,
-// .h1, .h2, .h3, .h4, .h5, .h6 {
-//     font-family: 'Dosis', sans-serif;
-// }
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Dosis', sans-serif;
+}
 .inverse-typo {
     h1, h2, h3, h4, h5, h6,
     .h1, .h2, .h3, .h4, .h5, .h6,
@@ -33,11 +33,11 @@ ol, ul {
     background-color: black;
 }
 h1::selection {color: hotpink; background: black; }
-h2::selection {color: hotpink; background: black; }
-h3::selection {color: hotpink; background: black; }
-h4::selection {color: hotpink; background: black; }
-h5::selection {color: hotpink; background: black; }
-h6::selection {color: hotpink; background: black; }
+h2::selection {color: red; background: black; }
+h3::selection {color: rgb(160, 225, 255); background: black; }
+h4::selection {color: rgb(240, 255, 105); background: black; }
+h5::selection {color: rgb(105, 183, 255); background: black; }
+h6::selection {color: rgb(123, 255, 105); background: black; }
 
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -92,20 +92,3 @@ h6, .h6, p, .p {
         margin-bottom: 1rem;
     }
 }
-
-h1.pri-banner-heading {}
-.sec-banner-heading {}
-p.ter-banner-heading {}
-
-h2.pri-title-bold {}
-.sec-title-bold {}
-p.ter-title-bold {}
-
-h2.pri-title-normal {}
-.sec-title-normal {}
-p.ter-title-normal {}
-
-h2.pri-title-light {}
-.sec-title-light {}
-p.ter-title-light {}
-
