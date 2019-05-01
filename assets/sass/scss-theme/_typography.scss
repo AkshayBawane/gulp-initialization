@@ -39,6 +39,10 @@ h4::selection {color: rgb(240, 255, 105); background: black; }
 h5::selection {color: rgb(105, 183, 255); background: black; }
 h6::selection {color: rgb(123, 255, 105); background: black; }
 
+// Responsive Typography As per used in Bootstrap
+.title {
+    font-size: calc(1.525rem + 3.3vw);
+}
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     line-height: 135%;

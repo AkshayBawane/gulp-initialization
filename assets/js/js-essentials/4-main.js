@@ -63,3 +63,29 @@ $(function($) {
 	// Disable Mouse Scroll Zoom
 
 });
+
+// $(function () {
+//     var $gallery = $('.gallery a').simpleLightbox();
+// });
+// $(function () {
+//     AOS.init();
+// });
+// $(function () {
+//     $('.tilt').universalTilt({
+//         settings: {
+//             shine: true,
+//             'shine-opacity': 0.5,
+//             'shine-save': true
+//             // options...
+//         }
+//     });
+// });
+
+// $(function () {
+//     $(".dropdown, .btn-group").hover(function () {
+//         var dropdownMenu = $(this).children(".dropdown-menu");
+//         if (dropdownMenu.is(":visible")) {
+//             dropdownMenu.parent().toggleClass("open");
+//         }
+//     });
+// });

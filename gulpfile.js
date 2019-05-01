@@ -5,6 +5,8 @@ const gulpLoadPlugins = require('gulp-load-plugins');
 const $ = gulpLoadPlugins();
 const browserSync = require('browser-sync');
 const cleanCSS = require('gulp-clean-css');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
 const del = require('del');
 const reload = browserSync.reload;
 
@@ -34,7 +36,17 @@ gulp.task('sass-styles', () => {
 		// 	"assets/sass/**/*.scss",
 		// ]))
 		.pipe($.sass.sync({ outputStyle: 'expanded'}).on('error', $.sass.logError))
-		.pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
+		.pipe(postcss([ autoprefixer({ browsers: [
+			'Chrome >= 35',
+			'Firefox >= 38',
+			'Edge >= 12',
+			'Explorer >= 10',
+			'iOS >= 8',
+			'Safari >= 8',
+			'Android 2.3',
+			'Android >= 4',
+			'Opera >= 12']})]))
+		// .pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
 		// .pipe(cleanCSS())
 		// .pipe($.purgecss({ content: ["assets/html/index.html"] }))
 		// .pipe($.uncss({ html: ['assets/html/index.html'] }))

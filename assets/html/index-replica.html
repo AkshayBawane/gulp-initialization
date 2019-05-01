@@ -7,7 +7,7 @@
 	<meta name="keywords" content="HTML,CSS,Web,Responsive,Templates">
 	<meta name="author" content="qwerty">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no user-scalable=0" />
-	<title>Home</title>
+	<title>Replica</title>
 
 	<!-- ✴✴✴✴✴✴✴✴✴✴ Theme CSS ✴✴✴✴✴✴✴✴✴✴ -->
 	<link rel="stylesheet" type="text/css" href="../../build/css/all-scss-files.css">
@@ -268,22 +268,22 @@
 
 		<div class='container py-5'>
 			<div class="gallery">
-				<a href="../../build/images/image1.jpg" class="big"><img src="../../build/images/thumbs/thumb1.jpg" class="img-fluid" alt="" title="Beautiful Image"/></a>
-				<a href="../../build/images/image2.jpg"><img src="../../build/images/thumbs/thumb2.jpg" class="img-fluid" alt="" title=""/></a>
-				<a href="../../build/images/image3.jpg"><img src="../../build/images/thumbs/thumb3.jpg" class="img-fluid" alt="" title="Beautiful Image"/></a>
-				<a href="../../build/images/image4.jpg"><img src="../../build/images/thumbs/thumb4.jpg" class="img-fluid" alt="" title=""/></a>
+				<a href="../../build/images/image1.jpg" class="big"><img src="../../build/images/thumbs/thumb1.jpg" alt="" title="Beautiful Image" /></a>
+				<a href="../../build/images/image2.jpg"><img src="../../build/images/thumbs/thumb2.jpg" alt="" title="" /></a>
+				<a href="../../build/images/image3.jpg"><img src="../../build/images/thumbs/thumb3.jpg" alt="" title="Beautiful Image" /></a>
+				<a href="../../build/images/image4.jpg"><img src="../../build/images/thumbs/thumb4.jpg" alt="" title="" /></a>
 				<div class="clearfix"></div>
 
-				<a href="../../build/images/image5.jpg"><img src="../../build/images/thumbs/thumb5.jpg" class="img-fluid" alt="" title=""/></a>
-				<a href="../../build/images/image6.jpg"><img src="../../build/images/thumbs/thumb6.jpg" class="img-fluid" alt="" title=""/></a>
-				<a href="../../build/images/image7.jpg" class="big"><img src="../../build/images/thumbs/thumb7.jpg" class="img-fluid" alt="" title=""/></a>
-				<a href="../../build/images/image8.jpg"><img src="../../build/images/thumbs/thumb8.jpg" class="img-fluid" alt="" title=""/></a>
+				<a href="../../build/images/image5.jpg"><img src="../../build/images/thumbs/thumb5.jpg" alt="" title="" /></a>
+				<a href="../../build/images/image6.jpg"><img src="../../build/images/thumbs/thumb6.jpg" alt="" title="" /></a>
+				<a href="../../build/images/image7.jpg" class="big"><img src="../../build/images/thumbs/thumb7.jpg" alt="" title="" /></a>
+				<a href="../../build/images/image8.jpg"><img src="../../build/images/thumbs/thumb8.jpg" alt="" title="" /></a>
 				<div class="clearfix"></div>
 
-				<a href="../../build/images/image9.jpg" class="big"><img src="../../build/images/thumbs/thumb9.jpg" class="img-fluid" alt="" title=""/></a>
-				<a href="../../build/images/image10.jpg"><img src="../../build/images/thumbs/thumb10.jpg" class="img-fluid" alt="" title=""/></a>
-				<a href="../../build/images/image11.jpg"><img src="../../build/images/thumbs/thumb11.jpg" class="img-fluid" alt="" title=""/></a>
-				<a href="../../build/images/image12.jpg"><img src="../../build/images/thumbs/thumb12.jpg" class="img-fluid" alt="" title=""/></a>
+				<a href="../../build/images/image9.jpg" class="big"><img src="../../build/images/thumbs/thumb9.jpg" alt="" title="" /></a>
+				<a href="../../build/images/image10.jpg"><img src="../../build/images/thumbs/thumb10.jpg" alt="" title="" /></a>
+				<a href="../../build/images/image11.jpg"><img src="../../build/images/thumbs/thumb11.jpg" alt="" title="" /></a>
+				<a href="../../build/images/image12.jpg"><img src="../../build/images/thumbs/thumb12.jpg" alt="" title="" /></a>
 				<div class="clearfix"></div>
 			</div>
 		</div>
@@ -300,41 +300,29 @@
 	<!-- ✴✴✴✴✴✴✴✴✴✴ Common JS ✴✴✴✴✴✴✴✴✴✴ -->
 
 	<!-- ✴✴✴✴✴✴✴✴✴✴ Theme JS ✴✴✴✴✴✴✴✴✴✴ -->
-	<script src="../../build/js/js-plugins.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+	<!-- <script src="../../build/js/js-plugins.js"></script> -->
+
+	<script>
+		// https://gist.github.com/zenorocha/5161860  This gives better performance.
+		(function() {
+
+			var script,
+				scripts = document.getElementsByTagName('script')[0];
+				
+			function load(url) {
+				script = document.createElement('script');
+				script.async = true;
+				script.src = url;
+				scripts.parentNode.insertBefore(script, scripts);
+			}
+			
+			load('../../build/js/js-plugins.js');
+			
+		}());
+	</script>
 
 	<!-- ✴✴✴✴✴✴✴✴✴✴ Custom JS Code ✴✴✴✴✴✴✴✴✴✴ -->
-	<script>
-		$(function () {
-			var $gallery = $('.gallery a').simpleLightbox();
-		});
-
-	</script>
-	<script>
-		$('.tilt').universalTilt({
-			settings: {
-				shine: true,
-				'shine-opacity': 0.5,
-				'shine-save': true
-				// options...
-			}
-		});
-
-	</script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$(".dropdown, .btn-group").hover(function () {
-				var dropdownMenu = $(this).children(".dropdown-menu");
-				if (dropdownMenu.is(":visible")) {
-					dropdownMenu.parent().toggleClass("open");
-				}
-			});
-		});
-
-	</script>
-	<script>
-		AOS.init();
-
-	</script>
 </body>
 
 </html>

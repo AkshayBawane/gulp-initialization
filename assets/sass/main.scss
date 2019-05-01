@@ -1,28 +1,32 @@
 /* ———————————————————————————————————————————————
-# main.scss
-# Sass file for a Launchpad template.
-# Author: Galacticlab
+    # main.scss
+    # Sass file for a Launchpad template.
+    # Author: Galacticlab
 ————————————————————————————————————————————————— */
 
 /* ———————————————————————————————————————————————
-[TABLE OF CONTENTS]
-# 1. Import Files
-# 2. Initialization
-# 3. Typography
-# 4. Browser Scrollbar
-# 5. Scroll To Top
-# 6. Image Overlay + Pattern Overlay
-# 7. Kenburns Slider
-# 8. Swiper Slider
-# 9. Chevron Scroll Bottom Animation
-# 10. Landing Page Image & Hover Effect
-# 11. CSS Ribbon
-# 12. Big Special Icon For Eye Catchy
-# 13. Background Motion Parallax
-# 14. Image Overlay Text Used In GAlLERY Lightbox
-# 15. Background Diagonal Edge
-# 16. Miscellaneous
+    [TABLE OF CONTENTS]
 ————————————————————————————————————————————————— */
+:root {
+    --text-gray: #9a9d9d;
+    --bg-faded: #eee;
+    --bg-red: #e73631;
+    --bg-white: #fff;
+
+    --color-dark: #494949;
+    --color-primary: #428bca;
+    --color-success: #5cb85c;
+
+    --color-info: #5bc0de;
+    --color-warning: #f0ad4e;
+    --color-danger: #d9534f;
+
+    --fw-lighter: 100;
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-bold: 600;
+    --fw-bolder: 700;
+}
 
 /* ———————————————————————————————————————————————
 # 1. Import Files
@@ -36,11 +40,13 @@
 @import "./scss-essentials/scss-bootstrap/bootstrap";
 
 // Scss Plugins
-@import "./scss-plugins/image-gallery/simplelightbox";
+@import "./scss-plugins/image-gallery/image-lightbox";
 @import "./scss-plugins/progressive-image";
 @import "./scss-plugins/swiper-slider";
 @import "./scss-plugins/perfect-scrollbar";
 @import "./scss-plugins/animate-on-scroll";
+@import "./scss-plugins/background-parallax-scroll-effect";
+@import "./scss-plugins/animate";
 
 // // Scss Theme
 @import "./scss-theme/bg-image";
@@ -49,7 +55,8 @@
 @import "./scss-theme/color-classes";
 @import "./scss-theme/helpers";
 @import "./scss-theme/typography";
-@import "./scss-theme/variables";
+@import "./scss-theme/custom-variables";
+@import "./scss-theme/buttons";
 
 /* ———————————————————————————————————————————————
 # 2. Initialization
@@ -155,7 +162,8 @@ textarea {
 }
 
 *:focus, *:active {
-    outline: 0;
+    outline: 0 !important;
+    box-shadow: none !important;
 }
 
 @media (max-width: 575.99px) {}
@@ -169,49 +177,16 @@ textarea {
 
 @media (min-width: 992px) and (max-width: 1199.99px) {}
 
-/* ———————————————————————————————————————————————
-   Define Variable Values
-————————————————————————————————————————————————— */
-:root {
-    --form-mb: 16px;
-    --p-font-size: 13px;
-    --text-gray: #9a9d9d;
-    --bg-faded: #eee;
-    --bg-red: #e73631;
-    --bg-white: #fff;
-
-    --color-dark: #494949;
-    --color-primary: #428bca;
-    --color-success: #5cb85c;
-    --color-info: #5bc0de;
-    --color-warning: #f0ad4e;
-    --color-danger: #d9534f;
-
-    --fw-lighter: 100;
-    --fw-light: 300;
-    --fw-normal: 400;
-    --fw-bold: 600;
-    --fw-bolder: 700;
-}
-
 .form-group { margin-bottom: var(--form-mb); }
 .form-control, input.form-control { border-radius: var(--border-radius); } /* Input Field Border Radius */
 
 /* ———————————————————————————————————————————————
    Utility Classes
 ————————————————————————————————————————————————— */
-*:focus { outline: 0 !important; }
-.align-items-center { display: flex; align-items: center !important; }
-.justify-content-center { display: flex; justify-content: center !important; }
+*:focus { outline: 0 !important; box-shadow: none !important; }
 .float-left, .pull-left { float: left !important; }
 .float-right, .pull-right { float: right !important; }
 .clear_both { display: block; clear: both !important; content: ""; }
-
-.fw-lighter { font-weight: var(--fw-lighter) !important; }
-.fw-light { font-weight: var(--fw-light) !important; }
-.fw-normal, .fw-regular { font-weight: var(--fw-normal) !important; }
-.fw-bold { font-weight: var(--fw-bold) !important; }
-.fw-bolder { font-weight: var(--fw-bolder) !important; }
 
 .text-primary, .text-blue, .text-link { color: #428bca; background-color: transparent; }
 .text-gray { color: var(--text-gray) !important; }
@@ -222,13 +197,9 @@ textarea {
 
 .table-responsive { display: block; width: 100%; overflow-x: auto; }
 
-.pos-center { position: absolute; transform: translate(-50%, -50%); }
+
 
 /* Background color classes */
-.bg-faded { background-color: var(--bg-faded) !important; }
-.bg-red, .vacutainer-clr-red { background-color: var(--bg-red) !important; }
-.bg-white, .vacutainer-clr-white { background-color: var(--bg-white) !important; }
-
 .bg-transparent { background-color: transparent !important; }
 
 /* ———————————————————————————————————————————————
@@ -236,31 +207,7 @@ Define All Buttons Here
 ————————————————————————————————————————————————— */
 
 /* Hover all button */
-button, select, .btn, input[type=button], input[type=file], .img-link, .text-link { transition: 0.3s; cursor: pointer; }
+button, select, .btn, input[type=button], input[type=file], .img-link, .text-link { transition: all 0.3s ease-out; cursor: pointer; }
 button:hover, select:hover, .btn:hover, input[type=button]:hover, input[type=file]:hover, .img-link:hover, .text-link:hover { cursor: pointer; }
 
-/* Outline Border Button */
-.btn-outline-primary { color: var(--color-primary); border: 1px solid var(--color-primary); background-color: transparent; }
-.btn-outline-success { color: var(--color-success); border: 1px solid var(--color-success); background-color: transparent; }
-.btn-outline-info { color: var(--color-info); border: 1px solid var(--color-info); background-color: transparent; }
-.btn-outline-warning { color: var(--color-warning); border: 1px solid var(--color-warning); background-color: transparent; }
-.btn-outline-danger { color: var(--color-danger); border: 1px solid var(--color-danger); background-color: transparent; }
-.btn-outline-dark { color: var(--color-dark); border: 1px solid var(--color-dark); background-color: transparent; }
 
-/* Outline Button Hover */
-.btn-outline-primary:hover, .btn-outline-primary:focus { color: #fff; background-color: var(--color-primary); border-color: var(--color-primary); }
-.btn-outline-success:hover, .btn-outline-success:focus { color: #fff; border: 1px solid var(--color-success); background-color: var(--color-success); }
-.btn-outline-info:hover, .btn-outline-info:focus { color: #fff; border: 1px solid var(--color-info); background-color: var(--color-info); }
-.btn-outline-warning:hover, .btn-outline-warning:focus { color: #fff; border: 1px solid var(--color-warning); background-color: var(--color-warning); }
-.btn-outline-danger:hover, .btn-outline-danger:focus { color: #fff; border: 1px solid var(--color-danger); background-color: var(--color-danger); }
-.btn-outline-dark:hover, .btn-outline-dark:focus { color: #fff; border: 1px solid var(--color-dark); background-color: var(--color-dark); }
-.btn-link-outline:hover, .btn-link-outline:focus { border: 1px solid var(--color-primary); text-decoration: none; border-radius: 3px; padding: 6px 12px; }
-
-/* Shadow Buttons */
-.shadow-primary:hover, .shadow-primary:focus { box-shadow: 0 3px 10px var(--color-primary); }
-.shadow-success:hover, .shadow-success:focus { box-shadow: 0 3px 10px var(--color-success); }
-.shadow-info:hover, .shadow-info:focus { box-shadow: 0 3px 10px var(--color-info); }
-.shadow-warning:hover, .shadow-warning:focus { box-shadow: 0 3px 10px var(--color-warning); }
-.shadow-danger:hover, .shadow-danger:focus { box-shadow: 0 3px 10px var(--color-danger); }
-.shadow-dark:hover, .shadow-dark:focus { box-shadow: 0 3px 10px var(--color-dark); }
-/* END Define All Buttons Here */

@@ -1,0 +1,27 @@
+/*———————————————————————————————————————————————
+  Modern Background Parallax Scroll Effect With jQuery And CSS
+  https://www.jqueryscript.net/demo/background-parallax-scroll-effect/
+———————————————————————————————————————————————*/
+
+.parallax {
+	position: relative;
+	background-attachment: fixed;
+	background-position: center 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+}
+
+.caption {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+	.parallax {
+		background-attachment: scroll;
+	}
+}

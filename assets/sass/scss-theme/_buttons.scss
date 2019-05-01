@@ -1,0 +1,953 @@
+/* ——————————————————————————————————————————————————
+	Buttons.scss
+—————————————————————————————————————————————————— */
+
+// Custom filled button
+.btn-1-primary 	{
+	color: $white-color;
+	background-color: $primary-color !important;
+	border-color: $primary-color !important;
+}
+.btn-1-secondary 	{
+	color: $white-color;
+	background-color: $secondary-color !important;
+	border-color: $secondary-color !important;
+}
+.btn-1-success 	{
+	color: $white-color;
+	background-color: $success-color !important;
+	border-color: $success-color !important;
+}
+.btn-1-danger 	{
+	color: $white-color;
+	background-color: $danger-color !important;
+	border-color: $danger-color !important;
+}
+.btn-1-warning 	{
+	color: $white-color;
+	background-color: $warning-color !important;
+	border-color: $warning-color !important;
+}
+.btn-1-info 	{
+	color: $white-color;
+	background-color: $info-color !important;
+	border-color: $info-color !important;
+}
+.btn-1-dark {
+	color: $white-color;
+	background-color: $dark-color !important;
+	border-color: $dark-color !important;
+}
+// END Custom filled button
+
+// Custom filled button: Hover
+.btn-1-primary:hover, .btn-1-primary:focus 	{
+	color: $white-color;
+	background-color: $primary-color !important;
+	border-color: $primary-color !important;
+	box-shadow: 0 3px 10px rgba($primary-color, .5); 
+}
+.btn-1-secondary:hover, .btn-1-secondary:focus 	{
+	color: $white-color;
+	background-color: $secondary-color !important;
+	border-color: $secondary-color !important;
+	box-shadow: 0 3px 10px rgba($secondary-color, .5); 
+}
+.btn-1-success:hover, .btn-1-success:focus 	{
+	color: $white-color;
+	background-color: $success-color !important;
+	border-color: $success-color !important;
+	box-shadow: 0 3px 10px rgba($success-color, .5); 
+}
+.btn-1-danger:hover, .btn-1-danger:focus 	{
+	color: $white-color;
+	background-color: $danger-color !important;
+	border-color: $danger-color !important;
+	box-shadow: 0 3px 10px rgba($danger-color, .5); 
+}
+.btn-1-warning:hover, .btn-1-warning:focus 	{
+	color: $white-color;
+	background-color: $warning-color !important;
+	border-color: $warning-color !important;
+	box-shadow: 0 3px 10px rgba($warning-color, .5); 
+}
+.btn-1-info:hover, .btn-1-info:focus 	{
+	color: $white-color;
+	background-color: $info-color !important;
+	border-color: $info-color !important;
+	box-shadow: 0 3px 10px rgba($info-color, .5); 
+}
+.btn-1-dark:hover, .btn-1-dark:focus 	{
+	color: $white-color;
+	background-color: $dark-color !important;
+	border-color: $dark-color !important;
+	box-shadow: 0 3px 10px rgba($dark-color, .5); 
+}
+// END Custom filled button: Hover
+
+// Custom outline light background button
+.btn-2-primary {
+	color: $white-color;
+	background-color: rgba($primary-color, 1);
+	border-color: rgba($primary-color, 1);
+}
+.btn-2-secondary {
+	color: $white-color;
+	background-color: rgba($secondary-color, 1);
+	border-color: rgba($secondary-color, 1);
+}
+.btn-2-success {
+	color: $white-color;
+	background-color: rgba($success-color, 1);
+	border-color: rgba($success-color, 1);
+}
+.btn-2-danger 	{
+	color: $white-color;
+	background-color: rgba($danger-color, 1);
+	border-color: rgba($danger-color, 1);
+}
+.btn-2-warning {
+	color: $white-color;
+	background-color: rgba($warning-color, 1);
+	border-color: rgba($warning-color, 1);
+}
+.btn-2-info {
+	color: $white-color;
+	background-color: rgba($info-color, 1);
+	border-color: rgba($info-color, 1);
+}
+.btn-2-dark {
+	color: $white-color;
+	background-color: rgba($dark-color, 1);
+	border-color: rgba($dark-color, 1);
+}
+// END Custom outline light background button
+
+// Custom outline light background button: Hover
+.btn-2-primary:hover, .btn-2-primary:focus {
+	color: $primary-color;
+	background-color: rgba($primary-color, .2);
+	border-color: rgba($primary-color, .2);
+	box-shadow: 0 3px 10px rgba($primary-color, .5); 
+}
+.btn-2-secondary:hover, .btn-2-secondary:focus 	 {
+	color: $secondary-color;
+	background-color: rgba($secondary-color, .2);
+	border-color: rgba($secondary-color, .2);
+	box-shadow: 0 3px 10px rgba($secondary-color, .5); 
+}
+.btn-2-success:hover, .btn-2-success:focus {
+	color: $success-color;
+	background-color: rgba($success-color, .2);
+	border-color: rgba($success-color, .2);
+	box-shadow: 0 3px 10px rgba($success-color, .5); 
+}
+.btn-2-danger:hover, .btn-2-danger:focus {
+	color: $danger-color;
+	background-color: rgba($danger-color, .2);
+	border-color: rgba($danger-color, .2);
+	box-shadow: 0 3px 10px rgba($danger-color, .5); 
+}
+.btn-2-warning:hover, .btn-2-warning:focus {
+	color: $warning-color;
+	background-color: rgba($warning-color, .2);
+	border-color: rgba($warning-color, .2);
+	box-shadow: 0 3px 10px rgba($warning-color, .5); 
+}
+.btn-2-info:hover, .btn-2-info:focus 	 {
+	color: $info-color;
+	background-color: rgba($info-color, .2);
+	border-color: rgba($info-color, .2);
+	box-shadow: 0 3px 10px rgba($info-color, .5); 
+}
+.btn-2-dark:hover, .btn-2-dark:focus {
+	color: $dark-color;
+	background-color: rgba($dark-color, .2);
+	border-color: rgba($dark-color, .2);
+	box-shadow: 0 3px 10px rgba($dark-color, .5); 
+}
+// END Custom outline light background button: Hover
+
+// Custom outline dark background button
+.btn-3-primary {
+	color: $white-color;
+	background-color: rgba($primary-color, 1);
+	border-color: rgba($primary-color, 1);
+}
+.btn-3-secondary {
+	color: $white-color;
+	background-color: rgba($secondary-color, 1);
+	border-color: rgba($secondary-color, 1);
+}
+.btn-3-success {
+	color: $white-color;
+	background-color: rgba($success-color, 1);
+	border-color: rgba($success-color, 1);
+}
+.btn-3-danger 	{
+	color: $white-color;
+	background-color: rgba($danger-color, 1);
+	border-color: rgba($danger-color, 1);
+}
+.btn-3-warning {
+	color: $white-color;
+	background-color: rgba($warning-color, 1);
+	border-color: rgba($warning-color, 1);
+}
+.btn-3-info 	{
+	color: $white-color;
+	background-color: rgba($info-color, 1);
+	border-color: rgba($info-color, 1);
+}
+.btn-3-dark {
+	color: $white-color;
+	background-color: rgba($dark-color, 1);
+	border-color: rgba($dark-color, 1);
+}
+// END Custom outline dark background button
+
+// Custom outline dark background button: Hover
+.btn-3-primary:hover, .btn-3-primary:focus {
+	color: $primary-color;
+	background-color: transparent;
+	border-color: rgba($primary-color, 1);
+	box-shadow: 0 3px 10px rgba($primary-color, .5); 
+}
+.btn-3-secondary:hover, .btn-3-secondary:focus 	 {
+	color: $secondary-color;
+	background-color: transparent;
+	border-color: rgba($secondary-color, 1);
+	box-shadow: 0 3px 10px rgba($secondary-color, .5); 
+}
+.btn-3-success:hover, .btn-3-success:focus {
+	color: $success-color;
+	background-color: transparent;
+	border-color: rgba($success-color, 1);
+	box-shadow: 0 3px 10px rgba($success-color, .5); 
+}
+.btn-3-danger:hover, .btn-3-danger:focus {
+	color: $danger-color;
+	background-color: transparent;
+	border-color: rgba($danger-color, 1);
+	box-shadow: 0 3px 10px rgba($danger-color, .5); 
+}
+.btn-3-warning:hover, .btn-3-warning:focus {
+	color: $warning-color;
+	background-color: transparent;
+	border-color: rgba($warning-color, 1);
+	box-shadow: 0 3px 10px rgba($warning-color, .5); 
+}
+.btn-3-info:hover, .btn-3-info:focus 	 {
+	color: $info-color;
+	background-color: transparent;
+	border-color: rgba($info-color, 1);
+	box-shadow: 0 3px 10px rgba($info-color, .5); 
+}
+.btn-3-dark:hover, .btn-3-dark:focus {
+	color: $dark-color;
+	background-color: transparent;
+	border-color: rgba($dark-color, 1);
+	box-shadow: 0 3px 10px rgba($dark-color, .5); 
+}
+// END Custom outline dark background button: Hover
+
+// Custom outline button
+.btn-4-primary {
+	color: $primary-color;
+	background-color: transparent;
+	border-color: rgba($primary-color, 1);
+}
+.btn-4-secondary {
+	color: $secondary-color;
+	background-color: transparent;
+	border-color: rgba($secondary-color, 1);
+}
+.btn-4-success {
+	color: $success-color;
+	background-color: transparent;
+	border-color: rgba($success-color, 1);
+}
+.btn-4-danger 	{
+	color: $danger-color;
+	background-color: transparent;
+	border-color: rgba($danger-color, 1);
+}
+.btn-4-warning {
+	color: $warning-color;
+	background-color: transparent;
+	border-color: rgba($warning-color, 1);
+}
+.btn-4-info 	{
+	color: $info-color;
+	background-color: transparent;
+	border-color: rgba($info-color, 1);
+}
+.btn-4-dark {
+	color: $dark-color;
+	background-color: transparent;
+	border-color: rgba($dark-color, 1);
+}
+// END Custom outline button
+
+// Custom outline button: Hover
+.btn-4-primary:hover, .btn-4-primary:focus {
+	color: $white-color;
+	background-color: $primary-color;
+	border-color: rgba($primary-color, 1);
+	box-shadow: 0 3px 10px rgba($primary-color, .5); 
+}
+.btn-4-secondary:hover, .btn-4-secondary:focus 	 {
+	color: $white-color;
+	background-color: $secondary-color;
+	border-color: rgba($secondary-color, 1);
+	box-shadow: 0 3px 10px rgba($secondary-color, .5); 
+}
+.btn-4-success:hover, .btn-4-success:focus {
+	color: $white-color;
+	background-color: $success-color;
+	border-color: rgba($success-color, 1);
+	box-shadow: 0 3px 10px rgba($success-color, .5); 
+}
+.btn-4-danger:hover, .btn-4-danger:focus {
+	color: $white-color;
+	background-color: $danger-color;
+	border-color: rgba($danger-color, 1);
+	box-shadow: 0 3px 10px rgba($danger-color, .5); 
+}
+.btn-4-warning:hover, .btn-4-warning:focus {
+	color: $white-color;
+	background-color: $warning-color;
+	border-color: rgba($warning-color, 1);
+	box-shadow: 0 3px 10px rgba($warning-color, .5); 
+}
+.btn-4-info:hover, .btn-4-info:focus 	 {
+	color: $white-color;
+	background-color: $info-color;
+	border-color: rgba($info-color, 1);
+	box-shadow: 0 3px 10px rgba($info-color, .5); 
+}
+.btn-4-dark:hover, .btn-4-dark:focus {
+	color: $white-color;
+	background-color: $dark-color;
+	border-color: rgba($dark-color, 1);
+	box-shadow: 0 3px 10px rgba($dark-color, .5); 
+}
+// END Custom outline button: Hover
+
+
+// btn-1
+.btn-1 {
+    background: #f05a30;
+    letter-spacing: 0;
+    color: #fff;
+    margin-bottom: 10px;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+	width: 200px;
+}
+.btn-1:hover, .btn-1:focus {
+    letter-spacing: 1px;
+    background-color: #ffffff;
+    color: #f05a30;
+}
+.btn-1_1 {
+	background: #fff;
+    letter-spacing: 0;
+    color: #f05a30;
+    margin-bottom: 10px;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+	width: 200px;
+}
+.btn-1_1:hover, .btn-1_1:focus {
+	letter-spacing: 1px;
+    background-color: #f05a30;
+    color: #fff;
+}
+.btn-1_2 {
+	background: #ffaf2a;
+	letter-spacing: 0;
+	color: #fff;
+	margin-bottom: 10px;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+	width: 200px;
+}
+.btn-1_2:hover, .btn-1_2:focus {
+	letter-spacing: 1px;
+	background-color: #ffffff;
+	color: #ffaf2a;
+}
+// END btn-1
+
+// btn-4-next
+.btn-4-next {
+	display: inline-block;
+	vertical-align: middle;
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px transparent;
+	position: relative;
+	transition-property: color;
+	transition-duration: 0.3s;
+	position: relative;
+	padding: 18px 50px 18px 40px;
+	z-index: 1;
+	transition: all 0.8s ease 0s;
+	border: thin solid black;
+	color: #000;
+	min-width: 200px;
+	font-weight: 300;
+}
+
+.btn-4-next:after {
+	position: absolute;
+	content: "";
+	right: 22px;
+	top: 13px;
+	width: 40px;
+	height: 35px;
+	background: url(https://www.koruux.com/wp-content/uploads/2017/12/new-arrow-black.svg) right center no-repeat;
+	background-size: auto 25px;
+	transition: all 0.5s ease 0s;
+}
+
+.btn-4-next:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	transform: scaleX(0);
+	transform-origin: 0 50%;
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+.btn-4-next:hover,
+.btn-4-next:focus {
+	color: white;
+}
+
+.btn-4-next:hover:after,
+.btn-4-next:focus:after,
+.btn-4-next:active:after {
+	color: white;
+	background: url(https://www.koruux.com/wp-content/uploads/2017/12/new-arrow-white.svg) right center no-repeat;
+	right: 10px;
+	transition: all 0.5s ease 0s;
+	background-size: auto 25px;
+}
+
+.btn-4-next:hover:before,
+.btn-4-next:focus:before,
+.btn-4-next:active:before {
+	transform: scaleX(1);
+}
+// END btn-4-next
+
+// btn-4
+.btn-4-prev {
+	display: inline-block;
+	position: relative;
+	padding: 18px 40px 18px 50px;
+	z-index: 1;
+	transition: all 0.8s ease 0s;
+	border: thin solid black;
+	color: #000;
+	vertical-align: middle;
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px transparent;
+	position: relative;
+	transition-property: color;
+	transition-duration: 0.3s;
+	min-width: 200px;
+	font-weight: 300;
+}
+
+.btn-4-prev:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #2098D1;
+	transform: scaleX(0);
+	transform-origin: 100% 50%;
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+	background: #000;
+}
+
+.btn-4-prev:after {
+	position: absolute;
+	content: "";
+	left: 22px;
+	top: 13px;
+	width: 28px;
+	height: 35px;
+	background: url(https://www.koruux.com/wp-content/uploads/2017/12/new-arrow-black.svg) right center no-repeat;
+	background-size: auto 25px;
+	transition: all 0.5s ease 0s;
+	transform: rotateY(-180deg)
+}
+
+.btn-4-prev:hover:after,
+.btn-4-prev:focus:after {
+	background: url(https://www.koruux.com/wp-content/uploads/2017/12/new-arrow-white.svg) right center no-repeat;
+	left: 10px;
+	transition: all 0.5s ease 0s;
+	background-size: auto 25px;
+}
+
+
+.btn-4-prev:hover:before,
+.btn-4-prev:focus:before,
+.btn-4-prev:active:before {
+	transform: scaleX(1);
+}
+
+.btn-4-prev:hover,
+.btn-4-prev:focus,
+.btn-4-prev:active {
+	color: white;
+}
+// END btn-4
+
+// btn-3-1
+.btn-3-1_2 {
+	padding: 18px 50px 18px 40px;
+	display: inline-block;
+	vertical-align: middle;
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px transparent;
+	position: relative;
+	transition-property: color;
+	transition-duration: 0.3s;
+	border: thin solid #fff;
+	color: #fff;
+	min-width: 200px;
+	font-weight: 300;
+}
+
+.btn-3-1_2:hover,
+.btn-3-1_2:focus,
+.btn-3-1_2:active {
+	color: black;
+	text-decoration: none;
+}
+
+.btn-3-1_2:after {
+	position: absolute;
+	content: "";
+	right: 22px;
+	top: 13px;
+	width: 40px;
+	height: 35px;
+	background: url(https://www.koruux.com/wp-content/uploads/2017/12/new-arrow-white.svg) center no-repeat;
+	background-size: auto 25px;
+	transition: all 0.5s ease 0s;
+}
+
+.btn-3-1_2:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #fff;
+	transform: scaleX(0);
+	transform-origin: 0 50%;
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+.btn-3-1_2:hover:after,
+.btn-3-1_2:focus:after,
+.btn-3-1_2:active:after {
+	background: url(https://www.koruux.com/wp-content/uploads/2017/12/new-arrow-black.svg) right center no-repeat;
+	right: 10px;
+	transition: all 0.5s ease 0s;
+	background-size: auto 25px;
+}
+
+.btn-3-1_2:hover:before,
+.btn-3-1_2:focus:before,
+.btn-3-1_2:active:before {
+	transform: scaleX(1);
+}
+
+.btn-3-1_3 {
+	position: relative;
+	color: #000;
+	font-weight: 300;
+	margin: 2rem 0;
+}
+
+.btn-3-1_3:hover {
+	color: #000;
+}
+
+.btn-3-1_3:after {
+	position: absolute;
+	content: "";
+	right: -35px;
+	top: -5px;
+	width: 40px;
+	height: 35px;
+	background: url(https://www.koruux.com/wp-content/uploads/2017/12/new-arrow-black.svg) right center no-repeat;
+	background-size: auto 25px;
+	transition: all 0.5s ease 0s;
+}
+
+.btn-3-1_3:hover:after {
+	right: -47px;
+	transition: all 0.5s ease 0s;
+	background-size: auto 25px;
+}
+
+
+.btn-3-1_3-inverse {
+	position: relative;
+	color: #fff;
+	font-weight: 300;
+}
+
+.btn-3-1_3-inverse:hover {
+	color: #fff;
+}
+
+.btn-3-1_3-inverse:after {
+	position: absolute;
+	content: "";
+	right: -35px;
+	top: -5px;
+	width: 40px;
+	height: 35px;
+	background: url(https://www.koruux.com/wp-content/uploads/2017/12/new-arrow-white.svg) right center no-repeat;
+	opacity: .5;
+	background-size: auto 25px;
+	transition: all 0.5s ease 0s;
+}
+
+.btn-3-1_3-inverse:hover:after {
+	background: url(https://www.koruux.com/wp-content/uploads/2017/12/new-arrow-white.svg) right center no-repeat;
+	opacity: 1;
+	right: -47px;
+	transition: all 0.5s ease 0s;
+	background-size: auto 25px;
+}
+// END btn-3-1
+
+// btn-4
+.btn-4 {
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 1.2em;
+	min-width: 200px;
+	background: none;
+	border: 2px solid #a9fd00;
+	color: #222;
+	text-align: center;
+	border-radius: 3px;
+	font-weight: 400;
+	margin: 2rem 0;
+	transition: all .5s;
+}
+
+.btn-4:hover {
+	background-color: rgba(169, 253, 0, 0.2);
+	color: #000;
+}
+// END btn-4
+
+// btn-5
+.btn-5 {
+	position: relative;
+	padding: 20px 45px;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, .2);
+	box-shadow: inset 0 0 0 1px rgba(91, 118, 155, .34);
+	opacity: 1;
+	transition: all .25s ease-in-out;
+	color: #fff;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.btn-5_1 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 10px;
+	height: 10px;
+	border-top: 1px solid red;
+	border-left: 1px solid red;
+}
+
+.btn-5_2 {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 10px;
+	height: 10px;
+	border-top: 1px solid red;
+	border-right: 1px solid red;
+}
+
+.btn-5_3 {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 10px;
+	height: 10px;
+	border-right: 1px solid red;
+	border-bottom: 1px solid red;
+}
+
+.btn-5_4 {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 10px;
+	height: 10px;
+	border-bottom: 1px solid red;
+	border-left: 1px solid red;
+}
+
+.btn-5:hover {
+	border-color: red;
+	box-shadow: inset 0 0 0 1px red;
+	opacity: 1;
+}
+// END btn-5
+
+// btn-6_1-gradient
+.btn-6_1-gradient {
+	background: linear-gradient(to right, #0045cf 0%, #5aadff 50%, #0045cf 100%);
+	color: #fff;
+	background-size: 200% auto;
+	padding: 1.2em;
+	display: block;
+	width: 100%;
+	transition: all .5s ease-in-out;
+}
+
+.btn-6_1-gradient:hover,
+.btn-6_1-gradient:focus {
+	background-position: right center;
+	color: #fff;
+}
+// END btn-6_1-gradient
+
+// btn-6_2-gradient
+
+.btn-6_2-gradient {
+	background-image: linear-gradient(135deg, #2780e3, rgba(42, 176, 237, .28) 48%, rgba(42, 176, 237, .26) 49%, #2780e3);
+	background-size: 200% auto;
+	color: #fff!important;
+	display: block;
+	width: 100%;
+	padding: 1.2em;
+	transition: all .5s ease-in-out;
+}
+
+.btn-6_2-gradient:hover,
+.btn-6_2-gradient:focus {
+	color: #fff!important;
+	background-position: 100%;
+	box-shadow: 0 3px 10px rgba(39, 128, 227, .5);
+}
+// END btn-6_2-gradient
+
+// btn-7
+.btn-7 {
+	border-radius: 3px;
+	background-color: transparent;
+	border: 3px solid #fff;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 28px;
+	padding: 15px;
+	width: 200px;
+	transition: all 0.25s;
+	cursor: pointer;
+	display: inline-block;
+	margin-bottom: 15px;
+}
+.btn-7:hover {
+	color: #FFFFFF;
+	background-color: rgba(255, 255, 255, .2);
+}
+.btn-7 span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+.btn-7 span:after,
+.btn-8 span:after {
+	content: '';
+	background-image: url('https://image.flaticon.com/icons/svg/16/16049.svg');
+	position: absolute;
+	background-repeat: no-repeat;
+	height: 25px;
+	width: 25px;
+	opacity: 0;
+	top: 9px;
+	right: 0;
+	transition: all 0.25s;
+}
+.btn-7:hover span {
+	padding-right: 30px;
+}
+.btn-7:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+// END btn-7
+
+// btn-8
+.btn-8 {
+	background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
+	border-radius: 30px;
+	box-sizing: border-box;
+	color: #00a84f;
+	display: inline-block;
+	height: 60px;
+	padding: 4px;
+	width: 200px;
+	font-size: 20px;
+}
+
+.btn-8:hover {
+	color: #fff;
+}
+
+.btn-8 span {
+	align-items: center;
+	background: #fff;
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	transition: all .3s ease-in-out;
+	width: 100%;
+}
+
+.btn-8:hover span {
+	background: transparent;
+}
+// END btn-8
+
+// btn-9
+.btn-9 {
+	width: 60px;
+	height: 100px;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 9;
+	display: block;
+}
+
+.btn-9:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.btn-9:after {
+	position: absolute;
+	top: calc(50% - 1px);
+	width: 50px;
+	height: 2px;
+	background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+	content: '';
+	transition: all 0.3s ease-in-out;
+}
+
+.btn-9:hover:after {
+	width: 125px;
+}
+
+.btn-9.btn-9-prev:before {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8px 13px 8px 0;
+	border-color: transparent #fff transparent transparent;
+	left: 0;
+}
+
+.btn-9.btn-9-prev:after {
+	left: 13px;
+}
+// END btn-9
+
+
+.btn-7_prev, .btn-7_next {
+	position: relative;
+	cursor: pointer;
+	padding: 18px 10px;
+	display: inline-block;
+}
+.btn-7_prev span, .btn-7_next span {
+	width: 25px;
+	height: 2px;
+	display: block;
+	position: relative;
+	background: rgb(209, 211, 222);
+	transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+	border-radius: 2px;
+}
+.btn-7_next span::after {
+	bottom: -4px;
+	right: 0px;
+	transform: rotate(-45deg);
+	width: 10px;
+}
+.btn-7_prev span::after {
+	transform: rotate(45deg);
+	width: 10px;
+	bottom: -4px;
+	left: 0px;
+}
+.btn-7_prev span::before {
+	transform: rotate(-45deg);
+	width: 10px;
+	top: -4px;
+	left: 0px;
+}
+.btn-7_next span::before {
+	transform: rotate(45deg);
+	width: 10px;
+	top: -4px;
+	right: 0px;
+}
+.btn-7_prev span::before, .btn-7_prev span::after,
+.btn-7_next span::before, .btn-7_next span::after {
+	content: "";
+	display: block;
+	height: 2px;
+	position: absolute;
+	border-radius: 2px;
+	background: inherit;
+}
+.btn-7_prev:hover span,
+.btn-7_next:hover span {
+	width: 100px;
+}
+.btn-7_prev:hover span, .btn-7_next:hover span {
+	background: rgb(52, 68, 241);
+}

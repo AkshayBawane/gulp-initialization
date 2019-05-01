@@ -5,8 +5,9 @@
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<meta http-equiv='X-UA-Compatible' content='ie=edge'>
 	<title>Document</title>
-	<!-- <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css'> -->
+	<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css'>
 	<link rel="stylesheet" type="text/css" href="../../build/css/all-scss-files.css">
+	<!-- <link rel='stylesheet' href='https://www.jqueryscript.net/demo/background-parallax-scroll-effect/style.css'> -->
 </head>
 <body>
 	<div class='container'>
@@ -23,67 +24,69 @@
 			<p>Placerat? Leo tincidunt mollitia eligendi nibh, pede debitis illum laoreet adipisci reprehenderit, tincidunt pretium, massa eiusmod modi distinctio pellentesque sem egestas asperiores, interdum delectus. Ipsum congue occaecat faucibus similique quae, aute quisque suspendisse quasi nulla minim, nibh autem repellat, quisque, vivamus! Parturient, nostrum quia? Consequuntur.</p>
 			<p>Bibendum hic aliquip ratione fugiat. Litora commodo imperdiet, fugiat mollitia totam sit! Ridiculus nostrum, condimentum voluptatem, exercitationem at morbi quam vel orci cras animi? Tempora similique! Dignissim soluta cum ac corporis vehicula mattis feugiat quam! Senectus dolorum libero est inceptos minus proin, fringilla est odit.</p>				
 			<p>Cursus minus odit facilis quisquam tincidunt, reprehenderit hic wisi id magni ornare delectus scelerisque maiores, suspendisse occaecati ornare accusantium hac elit, fames congue class dolores molestiae bibendum viverra. Doloremque qui proin culpa perspiciatis elit! Viverra magni dis dui quod architecto lacus quibusdam! Incididunt nonummy felis.</p>
-			<style>
-			.prev-arrow-anime, .next-arrow-anime {
-				position: relative;
-				cursor: pointer;
-				padding: 18px 10px;
-				display: inline-block;
-			}
-			.prev-arrow-anime span, .next-arrow-anime span {
-				width: 25px;
-				height: 2px;
-				display: block;
-				position: relative;
-				background: rgb(209, 211, 222);
-				transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
-				border-radius: 2px;
-			}
-			.next-arrow-anime span::after {
-				bottom: -4px;
-				right: 0px;
-				transform: rotate(-45deg);
-				width: 10px;
-			}
-			.prev-arrow-anime span::after {
-				transform: rotate(45deg);
-				width: 10px;
-				bottom: -4px;
-				left: 0px;
-			}
-			.prev-arrow-anime span::before {
-				transform: rotate(-45deg);
-				width: 10px;
-				top: -4px;
-				left: 0px;
-			}
-			.next-arrow-anime span::before {
-				transform: rotate(45deg);
-				width: 10px;
-				top: -4px;
-				right: 0px;
-			}
-			.prev-arrow-anime span::before, .prev-arrow-anime span::after,
-			.next-arrow-anime span::before, .next-arrow-anime span::after {
-				content: "";
-				display: block;
-				height: 2px;
-				position: absolute;
-				border-radius: 2px;
-				background: inherit;
-			}
-			.prev-arrow-anime:hover span,
-			.next-arrow-anime:hover span {
-				width: 100px;
-			}
-			.prev-arrow-anime:hover span, .next-arrow-anime:hover span {
-				background: rgb(52, 68, 241);
-			}
-			</style>
-			<div class="prev-arrow-anime"><span></span></div>
-			<div class="next-arrow-anime"><span></span></div>			
 		</div>
 	</div>
+	<div class="parallax" id="parallax-1" data-image-src="https://source.unsplash.com/random/1920x1080">
+        <div class="caption">
+            <p class="display-3">qwerty</p>
+        </div>
+    </div>
+
+    <div class="text">
+        <h1>Modern Background Parallax Scroll Effect</h1>
+        </div>
+        <p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the
+            foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed
+            posuere
+            mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit
+            dignissim.
+            Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede,
+            nullam
+            vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at,
+            sodales
+            tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at
+            quibusdam
+            sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare.
+            Suscipit
+            proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.
+        </p>
+    </div>
+
+    <div class="parallax" id="parallax-2" data-image-src="https://source.unsplash.com/random/1920x1081"
+        data-height="400px">
+        <div class="caption">
+            <p class="display-3">qwerty</p>
+        </div>
+    </div>
+
+    <div class="text">
+        <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+    </div>
+
+    <div class="parallax" id="parallax-3" data-image-src="https://source.unsplash.com/random/1921x1080">
+        <div class="caption">
+            <p class="display-3">qwerty</p>
+        </div>
+    </div>
+
+    <div class="parallax" id="parallax-4" data-image-src="https://source.unsplash.com/random/1921x1081">
+        <div class="caption">
+            <p class="display-3">qwerty</p>
+        </div>
+    </div>
+
+    <div class="parallax" id="parallax-5" data-image-src="https://source.unsplash.com/random/1922x1081">
+        <div class="caption">
+            <p class="display-3">qwerty</p>
+        </div>
+    </div>
+
+    <div class="parallax" id="parallax-6" data-image-src="https://source.unsplash.com/random/1920x1082">
+        <div class="caption">
+            <p class="display-3">qwerty</p>
+        </div>
+    </div>
 	<script src="../../build/js/js-plugins.js"></script>
+	<!-- <script src='https://www.jqueryscript.net/demo/background-parallax-scroll-effect/app.js'></script> -->
 </body>
 </html>
