@@ -48,7 +48,7 @@
 @import "./scss-plugins/background-parallax-scroll-effect";
 @import "./scss-plugins/animate";
 
-// Scss Theme
+// // Scss Theme
 @import "./scss-theme/bg-image";
 @import "./scss-theme/bootstrap-custom";
 @import "./scss-theme/font-family";
@@ -57,9 +57,6 @@
 @import "./scss-theme/typography";
 @import "./scss-theme/custom-variables";
 @import "./scss-theme/buttons";
-
-@import "./scss-theme/demo-1";
-@import "./scss-theme/demo-webonise";
 
 /* ———————————————————————————————————————————————
 # 2. Initialization
@@ -153,6 +150,12 @@ a:focus {
     transition: all .3s ease-in-out;
 }
 
+// input {
+// 	&:focus {
+// 		outline: 0;
+// 	}
+// }
+
 textarea {
     outline: 0;
     max-width: 100%;
@@ -178,31 +181,219 @@ textarea {
 .form-control, input.form-control { border-radius: var(--border-radius); } /* Input Field Border Radius */
 
 /* ———————————————————————————————————————————————
-   Utility Classes
+    Project SCSS
 ————————————————————————————————————————————————— */
-*:focus { outline: 0 !important; box-shadow: none !important; }
-.float-left, .pull-left { float: left !important; }
-.float-right, .pull-right { float: right !important; }
-.clear_both { display: block; clear: both !important; content: ""; }
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	a {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 25px;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+		font-size: 18px;
+		&:hover {
+			color: #f1f1f1;
+		}
+	}
+	.closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+	}
+}
+#main {
+	transition: margin-left .5s;
+	padding: 16px;
+}
 
-.text-primary, .text-blue, .text-link { color: #428bca; background-color: transparent; }
-.text-gray { color: var(--text-gray) !important; }
+.loading-icon,
+.loading-icon::before,
+.loading-icon::after {
+    left: 60%;
+    top: 0;
+    margin-left: -6px;
+    margin-top: 0px;
+    position: absolute;
+    vertical-align: middle;
+    background: #f50057;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.loading-icon {
+	&::before {
+		content: "";
+		animation: pulseBounce 1.5s infinite;
+	}
+	&::after {
+		content: "";
+		animation: pulseBounce 1.5s -0.4s infinite;
+	}
+}
 
-.pos-relative, .position-relative { position: relative !important; }
+@keyframes pulseBounce {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
 
-.border-rounded { border-radius: 3px !important; }
+@-webkit-keyframes pulseBounce {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+.ec-left-sidebar-menu {
+	li {
+		a {
+			display: block;
+			padding: 10px;
+			border-left: 3px solid transparent;
+		}
+		ul {
+			li {
+				padding: 10px 10px 10px 5px;
+			}
+		}
+	}
+	& > li {
+		a {
+			&:hover {
+				background: linear-gradient(45deg, rgba(245,0,87,0.3) 0%,rgba(0,0,0,0) 100%);
+				cursor: pointer;
+				color: #111;
+			}
+			&.active {
+				background: linear-gradient(45deg, rgba(245,0,87,0.3) 0%,rgba(0,0,0,0) 100%);
+				border-left: 3px solid #f50057;
+			}
+		}
+	}
+}
+.btn-theme {
+	background: #18c981;
+	color: #fff;
+}
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+	border-bottom: 2px solid #f50057;
+	background: transparent;
+	border-radius: 0;
+	color: #111;
+}
+.nav-pills {
+	.nav-link {
+		display: inline-block;
+	}
+}
+.th-card {
+	padding: 15px;
+	position: relative;
+	min-height: 200px;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(to top, rgba(17,179,241,0.65) 0%,rgba(7,79,106,0) 56%,rgba(0,0,0,0) 100%);
+		height: 100%;
+		width: 100%;
+	}
+	.ul-1 {
+		li {
+			display: inline-block;
+			margin-right: 5px;
+			background: rgba(0, 0, 0, 0.35);
+			padding: 5px 10px;
+			border-radius: 34px 34px 34px 34px;
+		}
+	}
+	.ul-2 {
+		padding-left: 0;
+		display: flex;
+		align-items: center;
+		padding-left: 0;
+		li {
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+}
+.th-card-out-image {
+	position: absolute;
+	bottom: 0;
+	right: -20px;
+}
+.th-card-content .para-1, .th-card-content .para-2 {
+	margin-bottom: 0;
+	color: #fff;
+}
+.th-card-content {
+	.para-1 {
+		font-weight: bold;
+	}
+	.para-2 {
+		font-size: 14px;
+	}
+}
+.th-weeks-card {
+	.ul-1 {
+		padding-left: 0;
+		display: flex;
+		align-items: center;
+		li {
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+	.ul-2 {
+		display: inline-block;
+		padding-left: 0;
+		li {
+			display: inline-block;
+			margin-left: -8px;
+			img {
+				border-radius: 50%;
+				height: 30px;
+				width: 30px;
+				object-fit: cover;
+			}
+		}
+	}
+}
+.th-weeks-card-content .para-1, .th-weeks-card-content .para-2 {
+	margin-bottom: 0;
+}
+.th-weeks-card-content {
+	.para-1 {
+		font-weight: bold;
+	}
+	.para-2 {
+		font-size: 14px;
+	}
+}
 
-.table-responsive { display: block; width: 100%; overflow-x: auto; }
+@media (min-width: 576px) and (max-width: 767.99px) {
 
-
-
-/* Background color classes */
-.bg-transparent { background-color: transparent !important; }
-
-/* ———————————————————————————————————————————————
-Define All Buttons Here
-————————————————————————————————————————————————— */
-
-/* Hover all button */
-button, select, .btn, input[type=button], input[type=file], .img-link, .text-link { transition: all 0.3s ease-out; cursor: pointer; }
-button:hover, select:hover, .btn:hover, input[type=button]:hover, input[type=file]:hover, .img-link:hover, .text-link:hover { cursor: pointer; }
+}
