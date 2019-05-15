@@ -274,7 +274,7 @@ $sides: (top, bottom, left, right, all);
     }
 }
 
-$verticalspace: 30;
+$verticalspace: 50;
 @while $verticalspace > 5    {
     .py-#{$verticalspace}, .ptb-#{$verticalspace} { padding-top: #{$verticalspace}px !important; padding-bottom: #{$verticalspace}px !important; }
     .my-#{$verticalspace}, .mtb-#{$verticalspace} { margin-top: #{$verticalspace}px !important; margin-bottom: #{$verticalspace}px !important; }

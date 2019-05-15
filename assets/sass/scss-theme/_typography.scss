@@ -1,18 +1,33 @@
 /* ——————————————————————————————————————————————————
 	typography.scss
 —————————————————————————————————————————————————— */
+
+
+// 10px	0.625rem
+// 11px	0.6875rem
+// 12px	0.75rem
+// 13px	0.8125rem
+// 14px	0.875rem
+// 15px	0.9375rem
+// 16px	1rem
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
 p, a, li, blockquote, pre, address, button, input, optgroup, select, textarea, .fa {
     color: #333333;
 }
 body {
-    font-size: 1rem;
-    // font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    // font-size: 1.6rem;
+    // font-family: 'Roboto', sans-serif;
 }
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    // font-family: 'Dosis', sans-serif;
+    font-weight: var(--fw-bold);
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6, p {
+    margin-bottom: 0;
 }
 .inverse-typo {
     h1, h2, h3, h4, h5, h6,
@@ -25,7 +40,9 @@ h1, h2, h3, h4, h5, h6,
     cursor: pointer;
 }
 ol, ul {
-  list-style: none;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
 }
 
 ::selection {
@@ -47,52 +64,20 @@ h6::selection {color: rgb(123, 255, 105); background: black; }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     line-height: 135%;
 }
-h1, .h1 {font-size: 36px; }
-h2, .h2 {font-size: 32px; }
-h3, .h3 {font-size: 28px; }
-h4, .h4 {font-size: 24px; }
-h5, .h5 {font-size: 20px; }
+h1, .h1 {font-size: calc((var(--body-font) + 15px)); }
+h2, .h2 {font-size: calc((var(--body-font) + 12px)); }
+h3, .h3 {font-size: calc((var(--body-font) + 9px)); }
+h4, .h4 {font-size: calc((var(--body-font) + 6px)); }
+h5, .h5 {font-size: calc((var(--body-font) + 3px)); }
 h6, .h6, p, .p {
-    font-size: 16px;
-    line-height: 140%;
-    margin-bottom: 1rem;
+    font-size: var(--body-font);
 }
 
 @media(max-width: 1024px) {
-    h1, .h1 {font-size: 32px; }
-    h2, .h2 {font-size: 29px; }
-    h3, .h3 {font-size: 26px; }
-    h4, .h4 {font-size: 23px; }
-    h5, .h5 {font-size: 20px; }
-    h6, .h6, p, .p {
-        font-size: 16px;
-        line-height: 140%;
-        margin-bottom: 1rem;
-    }
 }
 
 @media(max-width: 768px) {
-    h1, .h1 {font-size: 28px; }
-    h2, .h2 {font-size: 26px; }
-    h3, .h3 {font-size: 24px; }
-    h4, .h4 {font-size: 22px; }
-    h5, .h5 {font-size: 20px; }
-    h6, .h6, p, .p {
-        font-size: 16px;
-        line-height: 150%;
-        margin-bottom: 1rem;
-    }
 }
 
 @media(max-width: 576px) {
-    h1, .h1 {font-size: 26px; }
-    h2, .h2 {font-size: 24px; }
-    h3, .h3 {font-size: 22px; }
-    h4, .h4 {font-size: 20px; }
-    h5, .h5 {font-size: 18px; }
-    h6, .h6, p, .p {
-        font-size: 16px;
-        line-height: 150%;
-        margin-bottom: 1rem;
-    }
 }

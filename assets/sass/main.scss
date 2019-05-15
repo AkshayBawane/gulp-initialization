@@ -5,36 +5,14 @@
 /* ———————————————————————————————————————————————
     [TABLE OF CONTENTS]
 ————————————————————————————————————————————————— */
-:root {
-    --border-radius: 3px;
-
-    --text-gray: #9a9d9d;
-    --bg-faded: #eee;
-    --bg-red: #e73631;
-    --bg-white: #fff;
-
-    --color-dark: #494949;
-    --color-primary: #428bca;
-    --color-success: #5cb85c;
-
-    --color-info: #5bc0de;
-    --color-warning: #f0ad4e;
-    --color-danger: #d9534f;
-
-    --fw-lighter: 100;
-    --fw-light: 300;
-    --fw-normal: 400;
-    --fw-bold: 600;
-    --fw-bolder: 700;
-}
 
 /* ———————————————————————————————————————————————
 # 1. Import Files
 ————————————————————————————————————————————————— */
 
 // Handwriting Font
-@import url('https://fonts.googleapis.com/css?family=Tangerine:400,700');
-@import url('https://fonts.googleapis.com/css?family=Alex+Brush');
+// @import url('https://fonts.googleapis.com/css?family=Tangerine:400,700');
+// @import url('https://fonts.googleapis.com/css?family=Alex+Brush');
 
 // Scss Essentials
 @import "./scss-essentials/scss-bootstrap/bootstrap";
@@ -58,7 +36,7 @@
 @import "./scss-theme/custom-variables";
 @import "./scss-theme/buttons";
 
-@import "./scss-theme/demo-1";
+// @import "./scss-theme/demo-1";
 @import "./scss-theme/demo-webonise";
 
 /* ———————————————————————————————————————————————
@@ -71,7 +49,7 @@ html, body {
 
 body {
     margin: 0;
-    font-size: 1rem;
+    // font-size: 1rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: $light-black-color;
@@ -137,15 +115,16 @@ a:focus {
 .scroll-top {
     .fa {
         color: gray;
+        font-size: 1rem;
     }
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     display: inline-block;
     position: fixed !important;
     bottom: -54px;
     right: 15px;
     background: rgba(gray, 0.5);
-    padding: 10px 14px;
+    padding: 10px 12px;
     color: $gray-color;
     border-radius: 50%;
     cursor: pointer;
@@ -206,3 +185,10 @@ Define All Buttons Here
 /* Hover all button */
 button, select, .btn, input[type=button], input[type=file], .img-link, .text-link { transition: all 0.3s ease-out; cursor: pointer; }
 button:hover, select:hover, .btn:hover, input[type=button]:hover, input[type=file]:hover, .img-link:hover, .text-link:hover { cursor: pointer; }
+
+ul.list-inline {
+    list-style: none;
+    li {
+        display: inline-block;
+    }
+}

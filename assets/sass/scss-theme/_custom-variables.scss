@@ -1,6 +1,33 @@
 /* ——————————————————————————————————————————————————
 	variables.scss
 —————————————————————————————————————————————————— */
+:root {
+    --border-radius: 3px;
+
+    --text-gray: #9a9d9d;
+    --bg-faded: #eee;
+    --bg-red: #e73631;
+    --bg-white: #fff;
+
+    --color-dark: #494949;
+    --color-primary: #428bca;
+    --color-success: #5cb85c;
+
+    --color-info: #5bc0de;
+    --color-warning: #f0ad4e;
+    --color-danger: #d9534f;
+
+    --fw-lighter: 100;
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-bold: 600;
+    --fw-bolder: 700;
+
+    --body-font: 0.75rem;
+}
+small, .small {
+    font-weight: var(--fw-bold);
+}
 // Colors
 $white-color: #ffffff;
 // $light-white-color: #f2f2f2;
