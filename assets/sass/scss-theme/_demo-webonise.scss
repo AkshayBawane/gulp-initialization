@@ -134,6 +134,7 @@ article p.article-content {
 .th-footer-middle {
     li {
         border-right: 1px solid #828488;
+        margin-bottom: 5px;
         &:last-child {
             border-right: 0;
         }
@@ -148,14 +149,41 @@ article p.article-content {
         color: #828488;
     }
 }
-
 @media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
     .th-cstm-nav {
         border-left: 1px solid #cccccc;
     }
 }
 @media (max-width: 575.99px) {
+    .th-mob-scroll {
+        overflow-x:scroll;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+    }
     .th-logo {
         width: 140px;
+    }
+    .th-cstm-nav-ul-1 {
+        border-bottom: 1px solid #cccccc;
+        li {
+            display: block;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        a {
+            font-size: 0.6875rem;
+            font-weight: var(--fw-bold);
+            padding: 8px;
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+    .th-cstm-nav-ul-2 li {
+        display: block;
+        margin-left: 15px;
     }
 }

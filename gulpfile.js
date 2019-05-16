@@ -47,7 +47,7 @@ gulp.task('sass-styles', () => {
 			'Android >= 4',
 			'Opera >= 12']})]))
 		// .pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
-		// .pipe(cleanCSS())
+		.pipe(cleanCSS())
 		// .pipe($.purgecss({ content: ["assets/html/index.html"] }))
 		// .pipe($.uncss({ html: ['assets/html/index.html'] }))
 		.pipe($.concat('all-scss-files.css'))

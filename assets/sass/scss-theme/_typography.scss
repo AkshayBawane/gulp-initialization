@@ -10,6 +10,9 @@
 // 14px	0.875rem
 // 15px	0.9375rem
 // 16px	1rem
+:root {
+    --body-font: 1rem;
+}
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
@@ -17,7 +20,7 @@ p, a, li, blockquote, pre, address, button, input, optgroup, select, textarea, .
     color: #333333;
 }
 body {
-    font-size: 0.75rem;
+    // font-size: 0.75rem;
     // font-size: 1.6rem;
     // font-family: 'Roboto', sans-serif;
 }

@@ -37,7 +37,7 @@
 @import "./scss-theme/buttons";
 
 // @import "./scss-theme/demo-1";
-@import "./scss-theme/demo-webonise";
+// @import "./scss-theme/demo-webonise";
 
 /* ———————————————————————————————————————————————
 # 2. Initialization
@@ -49,7 +49,6 @@ html, body {
 
 body {
     margin: 0;
-    // font-size: 1rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: $light-black-color;
@@ -75,7 +74,6 @@ a:focus {
 //     &::-webkit-scrollbar {
 //         width: 5px;
 //         height: 5px;
-//         display: none;
 //     }
 //     &::-webkit-scrollbar-button {
 //         width: 0px;
@@ -113,12 +111,8 @@ a:focus {
 # 5. Scroll To Top
 ————————————————————————————————————————————————— */
 .scroll-top {
-    .fa {
-        color: gray;
-        font-size: 1rem;
-    }
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
     display: inline-block;
     position: fixed !important;
     bottom: -54px;
@@ -130,6 +124,9 @@ a:focus {
     cursor: pointer;
     border: 4px solid rgba(255, 255, 255, 0.5);
     transition: all .3s ease-in-out;
+    .fa {
+        color: gray;
+    }
 }
 
 textarea {
